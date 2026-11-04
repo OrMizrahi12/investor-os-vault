@@ -67,7 +67,7 @@ li { margin-bottom: 6px; }
 <body>
 <main>
 <h1>What goes to the cloud, and what stays here</h1>
-<div class="status" id="status">Not running yet: it waits on your empty repository and the one line below</div>
+<div class="status" id="status">Not running yet: it waits on the two steps below</div>
 <p class="lead"><strong>One weekly check will run with your computer off. It reads only the copy on GitHub and opens no website. Everything that needs SEC, a price or your phone still needs this computer.</strong></p>
 <p>This does not move the system to the cloud. It adds one small job there. A task that reads filings would need your email, a wider network setting and a choice about Telegram, and those are yours to make.</p>
 
@@ -83,7 +83,7 @@ li { margin-bottom: 6px; }
       <li>No GitHub password or token</li>
     </ul>
   </div>
-  <div class="arrow"><b>→</b>The one line, only when you type it</div>
+  <div class="arrow"><b>→</b>One file, only when you send it</div>
   <div class="box hub">
     <h3>Private GitHub repository</h3>
     <ul>
@@ -138,7 +138,7 @@ li { margin-bottom: 6px; }
 <li><strong>Single closes inside notes.</strong> The price files and pages stay here, but some notes quote one close, such as <code>Rules/sizing.md</code> and the valuation skill's Corning file. Your notes said the pages and caches stay, and said nothing on these. Stripping them would break the notes, and earlier Journal entries may not be rewritten. A private repository is not publishing, but it is a copy off this computer.</li>
 <li><strong>Your own answers in the Journal.</strong> Today's entry holds your 35%, your hours a week and the mistake you expect to make. The check reads the Journal, so it goes up.</li>
 <li><strong>The word "superposition".</strong> This computer's account name is in a path in two scripts. It is not your name.</li>
-<li><strong>Later.</strong> If you ever write a real trade into a Journal entry, the next send carries it up. The <code>.gitignore</code> cannot catch a sentence. Nothing goes up unless you type the line, so that is the moment to look.</li>
+<li><strong>Later.</strong> If you ever write a real trade into a Journal entry, the next send carries it up. The <code>.gitignore</code> cannot catch a sentence. Nothing goes up unless you send it, so that is the moment to look.</li>
 </ul>
 
 <h2>Cloud against this computer</h2>
@@ -152,7 +152,7 @@ li { margin-bottom: 6px; }
 <tr><td>Who can change what</td><td>Your GitHub connection can push to any branch, including <code>main</code>. The proxy does not limit that (<a href="https://code.claude.com/docs/en/cloud-environments">same docs</a>). Your copy here is not touched.</td><td>Guardrails on the real files.</td></tr>
 <tr><td>How it can fail</td><td>GitHub connection lost: runs are skipped, and after 72 hours the task turns off. A "succeeded" run only means the session ended well (<a href="https://code.claude.com/docs/en/routines">scheduled tasks docs, research preview, undated, retrieved Nov. 4, 2026</a>).</td><td>Desktop closed or computer off. Nothing notices a run that did not happen (O16).</td></tr>
 <tr><td>Cost</td><td>Draws on your plan's usage (<a href="https://code.claude.com/docs/en/routines">same docs</a>).</td><td>Also draws on your plan.</td></tr>
-<tr><td>Upkeep</td><td>Type the line again after work you want it to see.</td><td>None.</td></tr>
+<tr><td>Upkeep</td><td>Send a new bundle after work you want it to see: one browser upload and one line.</td><td>None.</td></tr>
 </table></div>
 
 <h2>What the weekly task does</h2>
@@ -172,13 +172,13 @@ li { margin-bottom: 6px; }
 </ol>
 
 <h2>What you do</h2>
+<p>An uploaded session was refused twice by the git proxy, on Nov. 4, 2026, your report. So the files reach GitHub through your browser, as one file, and a session started from the repository unpacks them. No token touches this computer.</p>
 <ol>
-<li>On GitHub, make an empty private repository. Add no README.</li>
-<li>Install the <a href="https://github.com/apps/claude">Claude GitHub App</a> on that one repository. The access stays on Anthropic's servers and never reaches this computer or the session's machine (<a href="https://code.claude.com/docs/en/claude-code-on-the-web">cloud sessions docs, undated, retrieved Nov. 4, 2026</a>).</li>
-<li>Open a separate terminal window, not this session, and type this line. It needs a real terminal, so the <code>!</code> prefix does not work:</li>
+<li>On the repository's GitHub page, choose <strong>uploading an existing file</strong>, add <code>~/investor-os-upload/investor-os.bundle</code>, and commit it to <code>main</code>.</li>
+<li>In a separate terminal, not this session, type this line:</li>
 </ol>
-<pre id="line">cd ~/investor-os &amp;&amp; CCR_FORCE_BUNDLE=1 claude --cloud "Push this repository to main on OrMizrahi12/investor-os-vault, and change no file: git push origin HEAD:refs/heads/main. Reply with the pushed commit's hash, or the error if it fails."</pre>
-<p class="muted">Not proven yet. The first try, with no remote set, was refused by the git proxy on Nov. 4, 2026. Send a newer copy later with the same line, after a commit here.</p>
+<pre id="line">cd ~/investor-os &amp;&amp; claude --cloud "This clone holds investor-os.bundle at its root. Run: git fetch ./investor-os.bundle main:refs/heads/vault-import, then git push --force origin vault-import:refs/heads/main. Change no file. Reply with the pushed commit's hash, or the error if it fails."</pre>
+<p class="muted">The force replaces your one upload commit, so only the vault's own history stays. The path was tested on this computer with a throwaway repository, not yet on GitHub. A newer copy later takes the same two steps, with a new bundle.</p>
 
 <p class="foot" style="margin-top:32px">Stays free of prices, so it may go up. It recommends nothing, and no order was placed. Corning stays no buy. Drawn by hand on Nov. 4, 2026. Counts and sizes are calc., from <code>git ls-files</code> and <code>du</code> on Nov. 4, 2026.</p>
 </main>
