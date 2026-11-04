@@ -1,0 +1,131 @@
+# Figures read from one outside page, by hand-run fetch, not a sensor. Nothing here is refreshed by a script.
+# Source terms, updated Oct. 29, 2026: https://stockanalysis.com/terms-of-use/
+# Short excerpts allowed if unchanged and the source is named. Keep multiples.html on this computer.
+read_on = "2026-11-03"
+
+[[peer]]
+name = "Corning"
+base = "https://stockanalysis.com/stocks/glw/statistics/"
+currency = "USD"
+price = 126.23
+eps = 2.47
+pe = 51.12
+ev_ebit = 37.95
+fcf_yield = 2.32
+cap_b = 108.73
+ev_b = 115.37
+ebit_b = 2.97
+fcf_b = 2.46
+
+[[peer]]
+name = "Amphenol"
+base = "https://stockanalysis.com/stocks/aph/statistics/"
+currency = "USD"
+price = 82.28
+pe = 35.78
+ev_ebit = 22.09
+fcf_yield = 2.60
+cap_b = 203.17
+ev_b = 215.74
+ebit_b = 9.49
+fcf_b = 5.12
+
+[[peer]]
+name = "Fujikura"
+base = "https://stockanalysis.com/quote/tyo/5803/statistics/"
+currency = "JPY"
+price = 3900.00
+eps = 124.59
+pe = 31.30
+ev_ebit = 23.96
+fcf_yield = 1.45
+cap_b = 6460
+ev_b = 6420
+ebit_b = 252.45
+fcf_b = 93.85
+
+[[peer]]
+name = "Sumitomo Electric"
+base = "https://stockanalysis.com/quote/tyo/5802/statistics/"
+currency = "JPY"
+price = 1663.00
+eps = 138.14
+pe = 12.04
+ev_ebit = 10.98
+fcf_yield = 1.47
+cap_b = 5190
+ev_b = 5760
+ebit_b = 484.72
+fcf_b = 76.43
+
+[[peer]]
+name = "Prysmian"
+base = "https://stockanalysis.com/quote/bit/PRY/statistics/"
+currency = "EUR"
+price = 112.20
+eps = 4.03
+pe = 27.85
+ev_ebit = 23.48
+fcf_yield = 5.33
+cap_b = 32.79
+ev_b = 35.97
+ebit_b = 1.51
+fcf_b = 1.73
+
+[[peer]]
+name = "Furukawa Electric"
+base = "https://stockanalysis.com/quote/tyo/5801/statistics/"
+currency = "JPY"
+price = 2755.00
+eps = 127.33
+pe = 21.64
+ev_ebit = 22.20
+fcf_yield = -0.93
+cap_b = 1940
+ev_b = 2250
+ebit_b = 80.87
+fcf_b = -18.00
+
+[[peer]]
+name = "YOFC (Hong Kong shares)"
+base = "https://stockanalysis.com/quote/hkg/6869/statistics/"
+currency = "HKD"
+price = 100.50
+eps = 9.36
+pe = 10.74
+ev_ebit = 18.77
+fcf_yield = 3.00
+cap_b = 163.47
+ev_b = 167.50
+ebit_b = 9.50
+fcf_b = 5.23
+net_income_b = 7.57
+shares_m = 821.91
+
+[[peer]]
+name = "Hengtong"
+base = "https://stockanalysis.com/quote/sha/600487/statistics/"
+currency = "CNY"
+price = 40.45
+eps = 2.65
+pe = 15.25
+ev_ebit = 13.40
+fcf_yield = -0.34
+cap_b = 98.85
+ev_b = 106.68
+ebit_b = 7.96
+fcf_b = -0.33353
+
+[[peer]]
+name = "STL"
+base = "https://stockanalysis.com/quote/nse/STLTECH/statistics/"
+currency = "INR"
+price = 756.10
+eps = 14.22
+pe = 53.19
+ev_ebit = 33.39
+fcf_yield = 1.47
+cap_b = 390.12
+ev_b = 388.29
+ebit_b = 11.63
+fcf_b = 5.75

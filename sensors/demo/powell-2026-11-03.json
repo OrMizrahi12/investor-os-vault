@@ -1,0 +1,73 @@
+{
+ "company": "Powell Industries",
+ "ticker": "POWL",
+ "as_of": "2026-11-03",
+ "note": "Triage shortcut, as in Research/2026-11-03 Triage.md: reported earnings stand in for normal, one cash reading. A proposal.",
+ "inputs": {
+  "shares_diluted_m": {
+   "v": 36.604,
+   "src": "Q3 FY2026, [10-Q, filed Aug. 4, 2026](https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm)"
+  },
+  "price": {
+   "v": 163.34,
+   "src": "close of Nov. 3, 2026, [StockAnalysis, 4:00 PM EST, Nov. 3, 2026](https://stockanalysis.com/stocks/powl/)"
+  },
+  "aaa": {
+   "v": 0.0612,
+   "src": "[FRED AAA, Oct. 2026, downloaded Nov. 3, 2026](https://fred.stlouisfed.org/series/AAA)"
+  },
+  "record_growth": {
+   "v": 0.08142036862766644,
+   "src": "free cash flow per share, FY2016 to FY2025, split adjusted (calc., [SEC company facts, retrieved Nov. 3, 2026](https://data.sec.gov/api/xbrl/companyfacts/CIK0000080420.json))"
+  },
+  "earnings_m": {
+   "low": {
+    "v": 42.49,
+    "src": "ten-year average reported, FY2016 to FY2025 (calc., [SEC company facts, retrieved Nov. 3, 2026](https://data.sec.gov/api/xbrl/companyfacts/CIK0000080420.json))",
+    "status": "unconfirmed"
+   },
+   "mid": {
+    "v": 180.75,
+    "src": "FY2025 reported, [10-K, filed Nov. 19, 2025](https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm)",
+    "status": "unconfirmed"
+   },
+   "high": {
+    "v": 190.86,
+    "src": "twelve months to June 30, 2026 (calc., 180.75 + 139.44 - 129.33, [10-K, filed Nov. 19, 2025](https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm); [10-Q, filed Aug. 4, 2026](https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm))",
+    "status": "unconfirmed"
+   }
+  },
+  "cash_m": {
+   "low": {
+    "v": 77.1,
+    "src": "twelve-month free cash flow 243.96 less contract liabilities rise 299.5 to 466.36 (calc., [10-K, filed Nov. 19, 2025](https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm); [10-Q, filed Aug. 4, 2026](https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm); [SEC company facts, retrieved Nov. 3, 2026](https://data.sec.gov/api/xbrl/companyfacts/CIK0000080420.json))"
+   },
+   "mid": {
+    "v": 77.1,
+    "src": "twelve-month free cash flow 243.96 less contract liabilities rise 299.5 to 466.36 (calc., [10-K, filed Nov. 19, 2025](https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm); [10-Q, filed Aug. 4, 2026](https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm); [SEC company facts, retrieved Nov. 3, 2026](https://data.sec.gov/api/xbrl/companyfacts/CIK0000080420.json))"
+   },
+   "high": {
+    "v": 77.1,
+    "src": "twelve-month free cash flow 243.96 less contract liabilities rise 299.5 to 466.36 (calc., [10-K, filed Nov. 19, 2025](https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm); [10-Q, filed Aug. 4, 2026](https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm); [SEC company facts, retrieved Nov. 3, 2026](https://data.sec.gov/api/xbrl/companyfacts/CIK0000080420.json))"
+   }
+  },
+  "growth": {
+   "low": {
+    "v": 0,
+    "src": "no growth, approved on `base.html`, Nov. 3, 2026"
+   },
+   "mid": {
+    "v": 0.03,
+    "src": "record above the 3% cap, `Rules/when-to-buy.md`, Nov. 3, 2026"
+   },
+   "high": {
+    "v": 0.03,
+    "src": "record above the 3% cap, `Rules/when-to-buy.md`, Nov. 3, 2026"
+   }
+  }
+ },
+ "scenarios": [],
+ "open": [
+  "Past and rival multiples not worked out. No catalyst notes, so strategic value is not worked out. Normal earnings not worked out."
+ ]
+}

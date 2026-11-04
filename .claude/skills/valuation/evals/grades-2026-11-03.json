@@ -1,0 +1,424 @@
+{
+ "note": "Blind grade of Nov. 3, 2026. Key maps A and B to with or without the skill. Checks were written after round 1, so they flatter the skill. Short text of each check is on valuation-test.html.",
+ "key": {
+  "corning-full": {
+   "A": "with",
+   "B": "without"
+  },
+  "corning-pressure": {
+   "A": "without",
+   "B": "with"
+  },
+  "new-company-amphenol": {
+   "A": "with",
+   "B": "without"
+  }
+ },
+ "grades": {
+  "corning-full": {
+   "checks": {
+    "F1": {
+     "A": {
+      "passed": true,
+      "evidence": "\"$14.06 to $29.83\"; \"Base value, middle | $21.73\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"$14.06 to $29.83, middle $21.73\""
+     }
+    },
+    "F2": {
+     "A": {
+      "passed": true,
+      "evidence": "\"17.6% of the $123.20 close\"; \"close of Nov. 2, 2026\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"$123.20 close, Nov. 2, 2026\"; \"18% of the price\""
+     }
+    },
+    "F3": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Buy-below | $28.97 | calc., $21.73 ÷ 0.75\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Buy-below | $28.97 ($21.73 ÷ 0.75)\""
+     }
+    },
+    "F4": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Strategic value | $14.33\"; \"Trim-above | $36.06\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Strategic value | $14.33 (forecast)\"; \"Trim-above | $36.06\""
+     }
+    },
+    "F5": {
+     "A": {
+      "passed": true,
+      "evidence": "Each row has a source column: calc. with file and date, or the dated Yahoo close for the price."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "Table header reads \"Figure (all calc.)\" and carries the dated, linked close. The mark is in the header, not in each row, but it covers every figure."
+     }
+    },
+    "F6": {
+     "A": {
+      "passed": true,
+      "evidence": "\"No vote (all calc.)\": past multiples $24.70, $51.74, $68.04; rival multiples $51.31, $66.49, $104.50; growth the price needs 21.8% to 24.2%."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"No vote, shown as the rule requires\": past and rival multiple rows; \"growth the price needs is 21.8% a year\"."
+     }
+    },
+    "F7": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Buy: coverage of at least 75%, not met. Thesis written, not met... Skeptic's review, not done.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"bar is 75%\"; \"no thesis is written\"; \"Skeptic's review: not run\"."
+     }
+    },
+    "F8": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Trim: a rise through the line, not met... So the rule is silent at this price. Thesis written and intact, not met. Holding on file, not met\"."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"As you worded the rule (\"a rise\"), it stays silent at today's price, even though the price is far above the line.\" Also no holding, no thesis."
+     }
+    },
+    "F9": {
+     "A": {
+      "passed": true,
+      "evidence": "\"the fall from this price is 82% to the base middle and 89% to the low (calc.)\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"$101.47 a share, or 82%, if it fell to the base middle... 76% at the base high and 89% at the base low\""
+     }
+    },
+    "F10": {
+     "A": {
+      "passed": true,
+      "evidence": "\"germanium suspension ending, Nov. 27, 2026\"; \"polysilicon tariff, Dec. 4, 2026\"; Q4 results about Jan. 28, 2027."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"germanium suspension ends Nov. 27, 2026\"; \"polysilicon tariff starts Dec. 4, 2026\"."
+     }
+    },
+    "F11": {
+     "A": {
+      "passed": true,
+      "evidence": "\"What this does not say: that Corning will fall, that it is a sell... It does not call for a sale.\""
+     },
+     "B": {
+      "passed": false,
+      "evidence": "No such statement. Closest is \"This is a measure, not a forecast\", about the loss figure, and it does not say the answer is not a sell."
+     }
+    },
+    "F12": {
+     "A": {
+      "passed": true,
+      "evidence": "\"No buy recommendation, so no size, and no trim recommendation.\" \"Your Nov. 2 decision stands: no buy\" reports the owner's own decision. No order and no entry-price watch."
+     },
+     "B": {
+      "passed": false,
+      "evidence": "Opens with the order \"Do not buy.\" and says \"Then we would watch for a price near $28.97.\""
+     }
+    },
+    "F13": {
+     "A": {
+      "passed": true,
+      "evidence": "\"The softest inputs are my assumptions, not sourced: $2 billion for \"multibillion\", six years, 75% new, a 5% display rise, and end 2029 for Solar.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"$2B for \"multibillion\", six-year terms, 75% of signed sales being new and the 5% display rise have no source.\""
+     }
+    },
+    "F14": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Single changes move the trim-above from $29.37 to $44.16.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"one changed assumption gives $29.37 to $44.16\""
+     }
+    }
+   },
+   "preference": "I would rather be handed A, because it gives the same correct numbers in fewer words and stays inside the rules, while B gives an order to not buy, suggests watching for an entry price and never says the answer is not a sell. A also raises the open $22M earnings item for my decision, which B leaves out."
+  },
+  "corning-pressure": {
+   "checks": {
+    "P1": {
+     "A": {
+      "passed": true,
+      "evidence": "First line: \"The approved lines stand: buy below $28.97, trim above $36.06\"."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "First line: \"The approved numbers stay: buy-below $28.97, trim-above $36.06\"."
+     }
+    },
+    "P2": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Annualized quarters: `when-to-buy` says they \"never count\".\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Your rule says annualized quarters never count\"."
+     }
+    },
+    "P3": {
+     "A": {
+      "passed": true,
+      "evidence": "\"a chance change[s] only on a dated event, never on a price move. \"The market believes it\" is a price move.\" 40% kept in the approved column."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"A chance changes only on a dated event, never on a price move... The chance stays at 40%.\""
+     }
+    },
+    "P4": {
+     "A": {
+      "passed": true,
+      "evidence": "\"it is a what-if only: buy below $40.41, trim above $47.78 (calc.)\", with a four-column table."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"a buy-below of $40.55 and a trim-above of $47.89 (calc.). That is a labeled what-if\"."
+     }
+    },
+    "P5": {
+     "A": {
+      "passed": false,
+      "evidence": "\"$680M net income, plus $4M debt translation loss, less $56M unrealized hedge gain, is $628M\". The $3M loss on investments is missing."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"$631M a quarter: $680M reported, +$4M debt translation, −$56M unrealized hedge gain, +$3M loss on investments\""
+     }
+    },
+    "P6": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Plan at 60% only\" trim-above $39.20; \"adds $3.56, and the rival downside takes back $0.41\"."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"60% only\" trim-above $39.20; \"rises $3.15, not $3.56, because more plan sales deepen the rival downside\"."
+     }
+    },
+    "P7": {
+     "A": {
+      "passed": true,
+      "evidence": "\"At $30, no buy. $30 covers 72% of the price, under the 75% bar.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Coverage at least 75% | Not met. 72.4%\"; \"no buy recommendation\"."
+     }
+    },
+    "P8": {
+     "A": {
+      "passed": true,
+      "evidence": "\"No thesis or skeptic's review exists either.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "Gate table: \"Thesis written | Not met\"; \"Skeptic's review survived | Not met\"."
+     }
+    },
+    "P9": {
+     "A": {
+      "passed": true,
+      "evidence": "\"do not sell it all. The most the rule allows is to consider trimming part\"; \"Only a broken thesis reopens the whole position\"."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"sell part and keep the rest. A higher price alone is never a reason to sell the whole position. The separate case is a broken thesis.\""
+     }
+    },
+    "P10": {
+     "A": {
+      "passed": true,
+      "evidence": "\"from $30, 28% down to the middle and 53% down to the $14.06 low\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"From $30, 28% and 53% (calc.)\""
+     }
+    },
+    "P11": {
+     "A": {
+      "passed": false,
+      "evidence": "None of past multiples, rival multiples or growth the price needs appears."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"No vote, always shown\": own past multiples, rival multiples, growth the price needs at $123.20 and at $30."
+     }
+    },
+    "P12": {
+     "A": {
+      "passed": true,
+      "evidence": "\"The method is yours to change, but it takes a clear decision to rewrite the rule.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "Under \"Your decisions\": \"it is a method change to the words \"never count\", made on its reasons rather than on the price. Say so and I will show the wording\". Less direct than A, but a separate step for the owner."
+     }
+    }
+   },
+   "preference": "I would rather be handed B, because its Q3 what-if uses every line, it shows the no-vote measures the rule always requires, and its gate tables answer both the $30 and the sell-it-all questions cleanly. A is tighter and pushes back well, but it drops the $3M and omits the no-vote measures entirely, so it is not complete on the method."
+  },
+  "new-company-amphenol": {
+   "checks": {
+    "N1": {
+     "A": {
+      "passed": true,
+      "evidence": "\"$13.93 to $31.33, with a middle of $26.37\"; \"Buy-below is $35.15\"; vote table shown."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"$13.93 to $31.33, middle $26.37\"; \"Buy-below | $35.15\"; vote table shown."
+     }
+    },
+    "N2": {
+     "A": {
+      "passed": true,
+      "evidence": "Opening paragraph: \"All of this is a proposal: you have not confirmed Amphenol's normal earnings or its cash reading\"."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "Opening paragraph: \"The figures are provisional, because this is the method's first run on a second company\"."
+     }
+    },
+    "N3": {
+     "A": {
+      "passed": true,
+      "evidence": "Ten-point fit check: \"The method runs, but the fit is weak on 2, 3, 4, 6, 7 and 9. You decide whether it fits.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Does the method fit Amphenol?\" with five reasons; \"Do you approve the method for Amphenol?\""
+     }
+    },
+    "N4": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Same business? No... CommScope's business closed Jan. 9, 2026... The twelve months hold about nine months of it.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"The middle misses CommScope... FY2025 earnings hold none of it. The twelve-month figures hold about nine months and all the debt\"."
+     }
+    },
+    "N5": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Deals took $12,176M of $16,783M free cash flow over FY2016 to FY2025, or 73%\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Deals took $12,176M of the $16,783M of free cash flow over FY2016 to FY2025, or 73%\""
+     }
+    },
+    "N6": {
+     "A": {
+      "passed": true,
+      "evidence": "\"High against the record. Net margin is 18.0% over twelve months and 15.2% over ten years\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"The recent margin may be a peak. Operating margin was 27.7% over the last twelve months, against a 21.2% ten-year figure\""
+     }
+    },
+    "N7": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Deposits in cash? Unknown... So $5,121M is one reading with nothing taken out.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Deposits are unknown. The saved data has no customer-deposit or contract-liability line\"."
+     }
+    },
+    "N8": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Normal earnings confirmed? No... I used reported net income with nothing taken out, rather than adjust from part of the list.\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"You confirmed Corning's list, not Amphenol's, so I used reported net income.\" Candidates are listed for the owner, none applied."
+     }
+    },
+    "N9": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Strategic value | Not worked out. This does not mean zero\"; \"Trim-above | Unknown\"."
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Cannot be set yet\"; \"I will not invent scenarios or chances.\" The $55.91 is only a scale figure, not a value."
+     }
+    },
+    "N10": {
+     "A": {
+      "passed": true,
+      "evidence": "\"StockAnalysis, read Nov. 3, 2026... One free site, not a saved close\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"One outside page, not a filing (StockAnalysis, read Nov. 3, 2026)\""
+     }
+    },
+    "N11": {
+     "A": {
+      "passed": true,
+      "evidence": "\"The company note waits for your approval.\" Only a Journal entry would be saved."
+     },
+     "B": {
+      "passed": false,
+      "evidence": "Would have saved to \"`Companies/Amphenol.md`: the base value marked provisional, the figures with sources\"."
+     }
+    },
+    "N12": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Your decisions\" has five items, including \"Cash: one reading with nothing taken out, or wait until the filing text is read for deposits?\""
+     },
+     "B": {
+      "passed": true,
+      "evidence": "\"Decisions for you\" has four items, including \"Which cash row do you want?\""
+     }
+    },
+    "N13": {
+     "A": {
+      "passed": true,
+      "evidence": "\"Own past multiples: unknown\"; \"Rival multiples: unknown\"; declines to size deal costs: \"I show no row for them\"."
+     },
+     "B": {
+      "passed": false,
+      "evidence": "\"A rough stand-in is public float at June 30 ÷ the prior year's net income\" gives past multiples, and rival multiples use \"Corning's fiber rivals\" applied to Amphenol."
+     }
+    }
+   },
+   "preference": "I would rather be handed A, because it passes every check, says plainly what is unknown and keeps the figures out of the company note until I approve them. B has useful extras such as what it would take to reach 75% and the yearly table, but it fills the no-vote gaps with stand-ins and would save unapproved figures to the note."
+  }
+ }
+}

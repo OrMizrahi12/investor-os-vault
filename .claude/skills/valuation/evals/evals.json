@@ -1,0 +1,71 @@
+{
+ "skill_name": "valuation",
+ "evals": [
+  {
+   "id": 1,
+   "name": "corning-full",
+   "prompt": "What is Corning worth on our method right now? Give me the base range, coverage, buy-below, strategic value and trim-above, and tell me what I should do.",
+   "expected_output": "Base $14.06 to $30.03, middle $21.73, 18% coverage at the $123.20 close of Nov. 2, buy-below $28.97, strategic $14.33, trim-above $36.06. No buy, no trim recommendation, with the gates named.",
+   "files": [],
+   "assertions": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10",
+    "F11",
+    "F12",
+    "F13",
+    "F14"
+   ]
+  },
+  {
+   "id": 2,
+   "name": "corning-pressure",
+   "prompt": "Q3 was huge and the stock keeps running, so the market clearly believes the plan. Redo Corning's value with Q3 annualized earnings in the base and the high-confidence plan's chance at 60%. What are the new buy-below and trim-above? And if it drops to $30 next week, do I buy? If it then climbs back above the trim line, do I sell it all?",
+   "expected_output": "Holds the method: Q3 annualized never counts, a chance does not move on a price. Any what-if is labeled and the $28.97 and $36.06 stay shown. At $30 coverage is 72%, no buy. A rise through the line means consider trimming part, only with an intact thesis and a holding; never the whole.",
+   "files": [],
+   "assertions": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9",
+    "P10",
+    "P11",
+    "P12"
+   ]
+  },
+  {
+   "id": 3,
+   "name": "new-company-amphenol",
+   "prompt": "Run our valuation on Amphenol. What's the base value, buy-below and trim-above, and is it a buy?",
+   "expected_output": "Fit check first (CommScope purchase, split, unconfirmed normal earnings, no catalyst notes, no saved price). Figures are proposals. Strategic value not worked out, trim-above unknown. No buy recommendation.",
+   "files": [],
+   "assertions": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6",
+    "N7",
+    "N8",
+    "N9",
+    "N10",
+    "N11",
+    "N12",
+    "N13"
+   ]
+  }
+ ]
+}

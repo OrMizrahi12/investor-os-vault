@@ -1,0 +1,25 @@
+{
+ "label": "Corning",
+ "as_of": "2026-11-03",
+ "portfolio": {"file": "Portfolio/Paper portfolio.md"},
+ "companies": [
+  {
+   "name": "Corning", "ticker": "GLW",
+   "run": "sensors/valuation/runs/2026-11-03-01.json",
+   "downside_if_wrong": 0,
+   "thesis": "draft",
+   "skeptic": "did_not_survive",
+   "kill_line_crossed": false,
+   "scores": {"mechanism": 0, "record": 1, "customers": 1, "kill_lines": 1, "unknowns": 0},
+   "scores_status": "claude_reading",
+   "rose_through_trim": null
+  }
+ ],
+ "sources": {
+  "downside_if_wrong": "Rules/sizing.md, worked example: none, Nov. 3, 2026",
+  "thesis": "Companies/Corning.md, Thesis section: not written yet, Nov. 3, 2026",
+  "skeptic": "Journal, ruling on the skeptic's review, Nov. 3, 2026",
+  "kill_line_crossed": "Research/2026-11-03 Corning kill criteria.md, nine lines, none crossed, Nov. 3, 2026",
+  "scores": "Rules/sizing.md, Claude's reading for the owner to correct, Nov. 3, 2026"
+ }
+}

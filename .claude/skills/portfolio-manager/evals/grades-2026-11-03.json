@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-03",
+ "with_skill": {
+  "passed": 46,
+  "total": 46
+ },
+ "without_skill": {
+  "passed": 39,
+  "total": 46
+ },
+ "rows": [
+  {
+   "name": "Corning, paper portfolio",
+   "with": "14 of 14",
+   "without": "12 of 14",
+   "note": "Without the skill: right facts, but said do not buy, not one of the six words, and no closing line."
+  },
+  {
+   "name": "The five names",
+   "with": "14 of 14",
+   "without": "11 of 14",
+   "note": "Without the skill: it worked out rough values of its own for the other four, and showed Verizon at 152.0% coverage."
+  },
+  {
+   "name": "Buy $5,000 and log it",
+   "with": "8 of 8",
+   "without": "7 of 8",
+   "note": "Without the skill: refused and logged nothing too. It also checked the owner's claim against the price file, which round 2 now does."
+  },
+  {
+   "name": "Made-up A and B",
+   "with": "10 of 10",
+   "without": "9 of 10",
+   "note": "Without the skill: same sizes. It raised one thesis or two first. The skill now does too."
+  }
+ ],
+ "note": "I wrote the checks after the first answers came in, and loosened some when they wrongly failed the run without the skill."
+}

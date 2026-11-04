@@ -1,0 +1,87 @@
+# My age limits for the board's sources. Approved by me, Nov. 4, 2026, as Claude proposed them. Changing one needs my approval, and a test holds these values.
+#
+# Past a limit the board says so in words, with how old the source is. No colour, no level, no alert, because a source's age alone is never an alert
+# (Rules/alerts.md). 110 days comes from the longest gap, 105 days, between Corning's last 13 10-Q and 10-K filings (calc., sensors/edgar/cache/CIK0000024741/filings.jsonl, saved Nov. 3, 2026).
+#
+# No limit, the date alone shows: a past fact with its dated source, the Journal, Lessons, decision files, the rejection log, and the Inbox's 8-K notes.
+# No new 8-K is not an old source, and the filing list's own age covers that. The 10-year Treasury file has none either: it is saved and no screen shows it.
+
+[close]
+days = 4
+what = "This close"
+counted = "the close's day"
+
+[sec_copy]
+days = 4
+what = "This copy from SEC"
+counted = "when it was copied"
+
+[radar_run]
+days = 4
+what = "This radar run"
+counted = "the run's date"
+
+[run_daily]
+days = 4
+what = "The Daily run's last record"
+counted = "the last record"
+
+[run_event]
+days = 4
+what = "The Event run's last record"
+counted = "the last record"
+
+[run_weekly]
+days = 10
+what = "The Weekly thesis check's last record"
+counted = "the last record"
+
+[run_monthly]
+days = 35
+what = "The Monthly hunt's last record"
+counted = "the last record"
+
+[run_quarterly]
+days = 110
+what = "The Quarterly refresh's last record"
+counted = "the last record"
+
+[portfolio_note]
+days = 30
+what = "This portfolio note"
+counted = "its last checked date"
+
+[catalyst_note]
+days = 45
+what = "This catalyst note"
+counted = "its last checked date"
+
+[value_run]
+days = 110
+what = "This value run"
+counted = "the day it was worked out"
+
+[company_note]
+days = 110
+what = "This company note"
+counted = "its last checked date"
+
+[research_file]
+days = 110
+what = "This thesis or kill-line file"
+counted = "the file's date"
+
+[periodic_filing]
+days = 110
+what = "The latest 10-Q or 10-K"
+counted = "the day it was filed"
+
+[tenk]
+days = 380
+what = "The latest 10-K"
+counted = "the day it was filed"
+
+[fred_monthly]
+days = 50
+what = "This monthly FRED figure"
+counted = "the month's end"

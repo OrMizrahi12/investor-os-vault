@@ -1,0 +1,76 @@
+{
+  "_comment": "Input for scripts/value_screen.py. Replace example values with figures from the latest 10-K/10-Q (or local equivalent). Use one consistent currency and unit (units, not millions, if you want the size test to work). Per-share fields are per share. Rates are decimals. Delete fields you don't have; tests that need them will say 'insufficient data'. Keys starting with '_' are ignored.",
+  "name": "Example Industrial Co.",
+  "ticker": "EXMP",
+  "as_of": "2025-06-30",
+  "type": "industrial",
+  "_type_options": "industrial | utility | railroad | retail | financial",
+
+  "price": 42.0,
+  "shares_outstanding": 100000000,
+  "diluted_shares": 103000000,
+
+  "eps_history": {
+    "2015": 2.10, "2016": 2.25, "2017": 1.95, "2018": 2.40, "2019": 2.60,
+    "2020": 2.20, "2021": 2.90, "2022": 3.10, "2023": 3.00, "2024": 3.30
+  },
+  "eps_ttm": 3.35,
+  "dividends_per_share_history": {
+    "2015": 0.80, "2016": 0.84, "2017": 0.88, "2018": 0.92, "2019": 1.00,
+    "2020": 1.00, "2021": 1.08, "2022": 1.16, "2023": 1.24, "2024": 1.32
+  },
+  "years_of_uninterrupted_dividends": 31,
+  "dividend_per_share_current": 1.36,
+
+  "revenue": 4200000000,
+  "total_assets": 5000000000,
+  "current_assets": 2100000000,
+  "current_liabilities": 900000000,
+  "total_liabilities": 2300000000,
+  "long_term_debt": 1000000000,
+  "short_term_debt": 100000000,
+  "preferred_stock": 0,
+  "shareholders_equity": 2700000000,
+  "intangibles": 400000000,
+
+  "warrants_market_value": 0,
+  "options_outstanding": 2500000,
+  "options_granted": 1200000,
+  "_options_granted_note": "new options granted under the latest plan or in the latest year (tested against ~3% of shares); options_outstanding is the total overhang",
+  "industry_size_rank": 3,
+  "industry_peer_count": 14,
+  "_industry_rank_note": "size rank within the industry group (1 = largest) and number of companies in that group; without them 'prominent' is reported as needing judgment",
+
+  "expected_growth_rate": 0.04,
+  "aaa_bond_yield": 0.055,
+  "aa_bond_yield": 0.057,
+  "institutional_ownership": 0.58,
+  "position_value": 25000,
+  "_position_value_note": "only used when screening a list of current holdings: weights the portfolio earnings-yield test",
+
+  "fixed_charges": 60000000,
+  "fixed_charges_avg7": 58000000,
+  "fixed_charges_poorest_year": 55000000,
+  "pretax_earnings_before_fixed_charges_avg7": 480000000,
+  "pretax_earnings_before_fixed_charges_poorest": 360000000,
+  "aftertax_earnings_before_fixed_charges_avg7": 330000000,
+  "aftertax_earnings_before_fixed_charges_poorest": 250000000,
+  "preferred_dividends": 0,
+
+  "operating_cash_flow_history": {"2020": 380000000, "2021": 410000000, "2022": 450000000, "2023": 430000000, "2024": 470000000},
+  "financing_cash_flow_history": {"2020": -150000000, "2021": -160000000, "2022": -170000000, "2023": -175000000, "2024": -180000000},
+
+  "net_income": 335000000,
+  "depreciation_amortization": 140000000,
+  "maintenance_capex": 120000000,
+  "stock_option_cost": 15000000,
+  "pension_income": 0,
+  "pension_return_assumption": 0.06,
+  "invested_capital": 3200000000,
+  "owner_earnings_history": {"2020": 2.40, "2021": 2.70, "2022": 2.95, "2023": 3.05, "2024": 3.30},
+  "_owner_earnings_history_note": "per share, ideally 10 years (steady growth of 6-7% a year or more)",
+
+  "acquisitions_per_year": 1,
+  "years_with_nonrecurring_charges_last5": 1,
+  "years_paying_little_or_no_tax_while_profitable": 0
+}

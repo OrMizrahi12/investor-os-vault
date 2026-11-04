@@ -1,0 +1,18 @@
+{
+ "label": "Made-up A and B from Rules/sizing.md",
+ "as_of": "2026-11-03",
+ "portfolio": {"file": "Portfolio/Paper portfolio.md"},
+ "companies": [
+  {"name": "Made-up A", "ticker": "AAA", "price": 50, "price_date": "2026-11-03", "base": {"low": 18, "mid": 40, "high": 60}, "strategic": null, "downside_if_wrong": 3,
+   "thesis": "recorded", "thesis_state": "intact", "skeptic": "survived", "kill_line_crossed": false,
+   "scores": {"mechanism": 2, "record": 2, "customers": 2, "kill_lines": 1, "unknowns": 2}, "scores_status": "ruled"},
+  {"name": "Made-up B", "ticker": "BBB", "price": 40, "price_date": "2026-11-03", "base": {"low": 34, "mid": 38, "high": 42}, "strategic": null, "downside_if_wrong": 2,
+   "thesis": "recorded", "thesis_state": "intact", "skeptic": "survived", "kill_line_crossed": false,
+   "scores": {"mechanism": 1, "record": 2, "customers": 1, "kill_lines": 2, "unknowns": 1}, "scores_status": "ruled"}
+ ],
+ "ruled_separate": true,
+ "sources": {
+  "ruled_separate": "Owner's ruling: A and B are separate theses, Journal, Nov. 3, 2026",
+  "all": "Made up. Rules/sizing.md gives price, base low and middle, downside, totals 9 and 7. Base high and the five-test splits are from sensors/sizing/draw.py, which builds that example. Only the totals affect the answer."
+ }
+}

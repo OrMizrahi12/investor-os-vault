@@ -1,0 +1,157 @@
+# Every filed number Corning's base value and kill lines rest on, on file as of the approved run of Nov. 3, 2026.
+# Ids name a role, so the same id means the same thing next quarter. "ytd" is this year to date, "prior" the same span last year.
+# doc: which saved document the number is read from. moves: "each" can change at each 10-Q; "annual" only at a 10-K, so a change is a restatement.
+# After the owner approves a refresh, on_file is updated to match.
+filing = "0000024741-26-000279"
+
+reads = [
+  # Shares and earnings
+  { id = "shares", what = "Diluted shares, the quarter", on_file = 871, doc = "10-Q", moves = "each", rests_on = "Every per-share figure" },
+  { id = "ni_fy", what = "Net income to Corning, last audited year", on_file = 1596, doc = "10-K", moves = "annual", rests_on = "Earnings high" },
+  { id = "ni_ytd", what = "Net income to Corning, year to date", on_file = 1610, doc = "10-Q", moves = "each", rests_on = "Earnings high" },
+  { id = "ni_prior", what = "Net income to Corning, same span last year", on_file = 1056, doc = "10-Q", moves = "each", rests_on = "Earnings high" },
+  { id = "trans_fy", what = "Foreign debt translation, net income effect, last audited year", on_file = 40, doc = "10-K", moves = "annual", rests_on = "Earnings high" },
+  { id = "trans_ytd", what = "Foreign debt translation, net income effect, year to date", on_file = 0, doc = "release", moves = "each", rests_on = "Earnings high" },
+  { id = "trans_prior", what = "Foreign debt translation, net income effect, same span last year", on_file = 50, doc = "release", moves = "each", rests_on = "Earnings high" },
+  { id = "unreal_fy", what = "Unrealized hedge gain, net income, last audited year (a gain is positive)", on_file = 111, doc = "10-K", moves = "annual", rests_on = "Earnings high" },
+  { id = "unreal_ytd", what = "Unrealized hedge gain, net income, year to date", on_file = 41, doc = "10-Q", moves = "each", rests_on = "Earnings high" },
+  { id = "unreal_prior", what = "Unrealized hedge gain, net income, same span last year", on_file = 47, doc = "10-Q", moves = "each", rests_on = "Earnings high" },
+  { id = "sales_fy", what = "Investment, business and asset sale items, net income effect, last audited year", on_file = 18, doc = "10-K", moves = "annual", rests_on = "Earnings high" },
+  { id = "sales_ytd", what = "Same items, year to date: every line of the reconciliation, summed by you", on_file = 9, doc = "release", moves = "each", rests_on = "Earnings high" },
+  { id = "sales_prior", what = "Same items, same span last year: every line, summed by you", on_file = 11, doc = "release", moves = "each", rests_on = "Earnings high" },
+  # Cash
+  { id = "ocf_fy", what = "Operating cash flow, last audited year", on_file = 2695, doc = "10-K", moves = "annual", rests_on = "Cash, K5" },
+  { id = "ocf_ytd", what = "Operating cash flow, year to date", on_file = 3140, doc = "10-Q", moves = "each", rests_on = "Cash, K5" },
+  { id = "ocf_prior", what = "Operating cash flow, same span last year", on_file = 1643, doc = "10-Q", moves = "each", rests_on = "Cash, K5" },
+  { id = "capex_fy", what = "Capital expenditures, last audited year", on_file = 1282, doc = "10-K", moves = "annual", rests_on = "Cash, K5" },
+  { id = "capex_ytd", what = "Capital expenditures, year to date", on_file = 1299, doc = "10-Q", moves = "each", rests_on = "Cash, K5" },
+  { id = "capex_prior", what = "Capital expenditures, same span last year", on_file = 850, doc = "10-Q", moves = "each", rests_on = "Cash, K5" },
+  { id = "line_fy", what = "Customer deposits and government incentives line, last audited year", on_file = 268, doc = "10-K", moves = "annual", rests_on = "Cash high, K5" },
+  { id = "line_ytd", what = "Same line, year to date", on_file = 639, doc = "10-Q", moves = "each", rests_on = "Cash high, K5" },
+  { id = "line_prior", what = "Same line, same span last year", on_file = -49, doc = "10-Q", moves = "each", rests_on = "Cash high, K5" },
+  { id = "got_fy", what = "New customer deposits received, last audited year", on_file = 490, doc = "10-K", moves = "annual", rests_on = "Cash low and middle" },
+  { id = "got_ytd", what = "New customer deposits received, year to date, as filed", on_file = 1000, doc = "10-Q", moves = "each", rests_on = "Cash low and middle" },
+  { id = "got_prior", what = "New customer deposits received, same span last year. 0 if none is stated: quote the sentence that shows it", on_file = 0, doc = "10-Q", moves = "each", rests_on = "Cash low and middle" },
+  { id = "used_fy", what = "Customer deposits recognized, last audited year", on_file = 142, doc = "10-K", moves = "annual", rests_on = "Cash middle" },
+  { id = "used_ytd", what = "Customer deposits applied, year to date", on_file = 237, doc = "10-Q", moves = "each", rests_on = "Cash middle" },
+  { id = "used_prior", what = "Customer deposits applied, same span last year", on_file = 94, doc = "10-Q", moves = "each", rests_on = "Cash middle" },
+  # Kill lines and segment figures
+  { id = "opt_sales", what = "Optical net sales, the quarter", on_file = 2379, doc = "10-Q", moves = "each", rests_on = "K1, K3, K8, margin" },
+  { id = "opt_ni", what = "Optical segment net income, the quarter", on_file = 532, doc = "10-Q", moves = "each", rests_on = "K3, margin" },
+  { id = "opt_sales_last_q", what = "Optical net sales, the quarter before (the release's prior-quarter column)", on_file = 2072, doc = "release", moves = "each", rests_on = "K3, K8" },
+  { id = "opt_ni_last_q", what = "Optical net income, the quarter before", on_file = 438, doc = "release", moves = "each", rests_on = "K3" },
+  { id = "core_q", what = "Core sales, the quarter", on_file = 5081, doc = "release", moves = "each", rests_on = "K4, plan scenario" },
+  { id = "atm_shares", what = "Shares sold under the at-the-market program, year to date. 0 if none: quote the sentence", on_file = 0, doc = "10-Q", moves = "each", rests_on = "K6" },
+  { id = "opt_ytd_sales", what = "Optical net sales, year to date", on_file = 6297, doc = "10-Q", moves = "each", rests_on = "Capital per sale" },
+  { id = "solar_ytd_sales", what = "Solar net sales, year to date", on_file = 1244, doc = "10-Q", moves = "each", rests_on = "Capital per sale" },
+  { id = "opt_rest", what = "Optical net sales of the quarters that complete twelve months (Q4 2025 alone at Q3 2026)", on_file = 1701, doc = "Q1 release", moves = "each", rests_on = "Capital per sale" },
+  { id = "solar_rest", what = "Solar net sales of the quarters that complete twelve months", on_file = 475, doc = "Q1 release", moves = "each", rests_on = "Capital per sale" },
+  { id = "opt_assets", what = "Optical segment assets, quarter end", on_file = 5039, doc = "10-Q", moves = "each", rests_on = "Capital per sale" },
+  { id = "solar_assets", what = "Solar segment assets, quarter end", on_file = 3166, doc = "10-Q", moves = "each", rests_on = "Capital per sale" },
+  { id = "earnout", what = "Solar contingent consideration liability", on_file = 132, doc = "10-Q", moves = "each", rests_on = "Solar scenario" },
+  { id = "solar_q_sales", what = "Solar net sales, the quarter", on_file = 436, doc = "10-Q", moves = "each", rests_on = "Solar scenario" },
+  { id = "solar_q_ni", what = "Solar segment net income, the quarter", on_file = -7, doc = "10-Q", moves = "each", rests_on = "Solar scenario" },
+  { id = "glass_ni", what = "Glass segment net income, the quarter", on_file = 328, doc = "10-Q", moves = "each", rests_on = "Display scenario" },
+  { id = "glass_tax", what = "Glass income tax provision, the quarter", on_file = 87, doc = "10-Q", moves = "each", rests_on = "Display scenario" },
+  { id = "gaap_q_sales", what = "GAAP net sales, the quarter", on_file = 4855, doc = "release", moves = "each", rests_on = "Solar scenario, group margin" },
+  { id = "gaap_q_ni", what = "Net income to Corning, the quarter", on_file = 680, doc = "10-Q", moves = "each", rests_on = "Solar scenario, group margin" },
+  { id = "opt_low_sales", what = "Optical sales in the quarter that sets the rival downside (Q4 2025)", on_file = 1701, doc = "Q1 release", moves = "annual", rests_on = "Rival downside, K3's line" },
+  { id = "opt_low_ni", what = "Optical net income in that quarter", on_file = 305, doc = "Q1 release", moves = "annual", rests_on = "Rival downside, K3's line" },
+  { id = "display_fy", what = "Display sales, last audited year", on_file = 3697, doc = "10-K", moves = "annual", rests_on = "Display scenario" },
+]
+
+# Sums the script works, from the reads. on_file is the figure in the approved inputs or the kill note.
+calcs = [
+  { id = "earn_high", what = "Normal earnings, twelve months", on_file = 2051, formula = "ni_fy + ni_ytd - ni_prior + (trans_fy - trans_prior + trans_ytd) - (unreal_fy - unreal_prior + unreal_ytd) + (sales_fy - sales_prior + sales_ytd)", rests_on = "Earnings high" },
+  { id = "fcf", what = "Free cash flow, twelve months", on_file = 2461, formula = "ocf_fy + ocf_ytd - ocf_prior - (capex_fy + capex_ytd - capex_prior)", rests_on = "Cash" },
+  { id = "cash_high", what = "Cash, whole filed line out", on_file = 1505, formula = "fcf - (line_fy + line_ytd - line_prior)", rests_on = "Cash high, K5" },
+  { id = "cash_low", what = "Cash, only deposits received out", on_file = 971, formula = "fcf - (got_fy + got_ytd - got_prior)", rests_on = "Cash low" },
+  { id = "cash_mid", what = "Cash, both sides out, an estimate", on_file = 1256, formula = "cash_low + used_fy + used_ytd - used_prior", rests_on = "Cash middle" },
+  { id = "run_rate", what = "Core sales × 4 (K4's reading)", on_file = 20324, formula = "core_q * 4", rests_on = "K4, plan scenario" },
+  { id = "opt_margin", what = "Optical margin, the quarter", on_file = 0.22362337116435477, formula = "opt_ni / opt_sales", rests_on = "K3, scenarios" },
+  { id = "opt_margin_last_q", what = "Optical margin, the quarter before", on_file = 0.21138996138996138, formula = "opt_ni_last_q / opt_sales_last_q", rests_on = "K3" },
+  { id = "opt_capital", what = "Optical assets ÷ twelve-month sales", on_file = 0.6300325081270317, formula = "opt_assets / (opt_ytd_sales + opt_rest)", rests_on = "Scenarios" },
+  { id = "solar_capital", what = "Solar assets ÷ twelve-month sales", on_file = 1.8417684700407213, formula = "solar_assets / (solar_ytd_sales + solar_rest)", rests_on = "Solar scenario" },
+  { id = "margin_cut", what = "Optical margin less the low quarter's", on_file = 0.04431708074695323, formula = "opt_margin - opt_low_ni / opt_low_sales", rests_on = "Rival downside" },
+  { id = "glass_after_tax", what = "Glass: share of profit kept after tax", on_file = 0.7903614457831325, formula = "glass_ni / (glass_ni + glass_tax)", rests_on = "Display scenario" },
+  { id = "solar_new_sales", what = "Solar: $3,000M target less the quarter × 4", on_file = 1256, formula = "3000 - solar_q_sales * 4", rests_on = "Solar scenario" },
+  { id = "solar_new_profit", what = "Solar: $3,000M × group margin, plus the quarter's loss × 4", on_file = 448.1853759011329, formula = "3000 * gaap_q_ni / gaap_q_sales - solar_q_ni * 4", rests_on = "Solar scenario" },
+  { id = "plan_new_sales", what = "Plan: $35,000M less run rate and the signed, Solar and Display rows", on_file = 9985.15, formula = "35000 - run_rate - 3250 - solar_new_sales - display_fy * 0.05", rests_on = "Plan scenario" },
+]
+
+# Normal earnings by year: the ten years behind the low and the growth. The script checks each sits on or within eight lines under its label in a named 10-K. Old tables print the number apart from the label, so this is a weak check.
+# "ni" is reported net income to Corning. normal is what normal.html carries, and normal.html lists every adjustment.
+[[years]]
+year = 2016
+docs = ["glw-20181231x10k.htm", "glw-20171231x10k.htm"]
+ni = 3695
+normal = 1323
+items = [ ["Dow Corning|realignment", 2676], ["nrealized|hedg|translated earnings", 409] ]
+[[years]]
+year = 2017
+docs = ["glw-20181231x10k.htm", "glw-20171231x10k.htm"]
+ni = -497
+normal = 1496
+items = [ ["Tax Act", 1755], ["ranslation", 9], ["nrealized|hedg|translated earnings", 247] ]
+[[years]]
+year = 2018
+docs = ["glw-20201231x10k.htm"]
+ni = 1066
+normal = 1270
+items = [ ["ranslation", 15], ["nrealized|hedg|translated earnings", 189] ]
+[[years]]
+year = 2019
+docs = ["glw20211231_10k.htm"]
+ni = 960
+normal = 783
+items = [ ["ranslation", 2], ["nrealized|hedg|translated earnings", 179] ]
+[[years]]
+year = 2020
+docs = ["glw20211231_10k.htm"]
+ni = 512
+normal = 133
+items = [ ["HSG", 387], ["ranslation", 67], ["nrealized|hedg|translated earnings", 24], ["sale|investment", 83] ]
+[[years]]
+year = 2021
+docs = ["glw20221231_10k.htm", "glw20211231_10k.htm"]
+ni = 1906
+normal = 1519
+items = [ ["ranslation", 138], ["nrealized|hedg|translated earnings", 237], ["sale|investment", 29], ["Samsung", 17] ]
+[[years]]
+year = 2022
+docs = ["glw20231231_10k.htm", "glw20221231_10k.htm"]
+ni = 1316
+normal = 1097
+items = [ ["ranslation", 146], ["nrealized|hedg|translated earnings", 24], ["sale|investment", 49] ]
+[[years]]
+year = 2023
+docs = ["glw-20241231.htm", "glw20231231_10k.htm"]
+ni = 581
+normal = 543
+items = [ ["ranslation", 81], ["nrealized|hedg|translated earnings", 68], ["sale|investment", 25] ]
+[[years]]
+year = 2024
+docs = ["glw-20251231.htm"]
+ni = 506
+normal = 577
+items = [ ["ranslation", 80], ["nrealized|hedg|translated earnings", 85], ["sale|investment", 66] ]
+[[years]]
+year = 2025
+docs = ["glw-20251231.htm"]
+ni = 1596
+normal = 1543
+items = [ ["ranslation", 40], ["nrealized|hedg|translated earnings", 111], ["sale|investment", 18] ]
+
+# The record behind the growth ceiling, free cash flow per share, first and last year: 3.1% (base.html).
+[[record]]
+year = 2016
+docs = ["glw-20181231x10k.htm"]
+ocf = 2537
+capex = 1130
+shares = 1144
+[[record]]
+year = 2025
+docs = ["glw-20251231.htm"]
+ocf = 2695
+capex = 1282
+shares = 871

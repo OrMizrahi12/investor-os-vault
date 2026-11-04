@@ -1,0 +1,14 @@
+# Local and silent. test_dashboard.py checks these, and app.py refuses to draw without them.
+[server]
+address = "127.0.0.1"   # this computer only. Streamlit's default listens on every network.
+port = 8501
+headless = true         # no first-run prompt asking for an email address
+fileWatcherType = "none"
+runOnSave = false
+enableStaticServing = false
+
+[browser]
+gatherUsageStats = false  # Streamlit's default sends usage statistics
+
+[client]
+toolbarMode = "minimal"   # no Deploy button

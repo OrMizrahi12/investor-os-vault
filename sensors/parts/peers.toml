@@ -1,0 +1,86 @@
+# Figures read from one outside page, by hand, Nov. 3, 2026. No script refreshes them.
+# Adds rivals for the segments that sensors/multiples/peers.toml does not cover.
+# Same source and terms as that file: https://stockanalysis.com/terms-of-use/ (updated Oct. 29, 2026).
+[[peer]]
+name = "AGC"
+url = "https://stockanalysis.com/quote/tyo/5201/statistics/"
+quoted = "Oct. 30, 2026"
+ev_ebit = 12.42
+ev_sales = 0.91
+[[peer]]
+name = "Nippon Electric Glass"
+url = "https://stockanalysis.com/quote/tyo/5214/statistics/"
+quoted = "Oct. 30, 2026"
+ev_ebit = 13.27
+ev_sales = 1.07
+[[peer]]
+name = "Jenoptik"
+url = "https://stockanalysis.com/quote/etr/JEN/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 18.54
+ev_sales = 2.43
+[[peer]]
+name = "NGK"
+url = "https://stockanalysis.com/quote/tyo/5333/statistics/"
+quoted = "Nov. 2, 2026"
+ev_ebit = 11.95
+ev_sales = 1.93
+[[peer]]
+name = "Ibiden"
+url = "https://stockanalysis.com/quote/tyo/4062/statistics/"
+quoted = "Nov. 2, 2026"
+ev_ebit = 50.00
+ev_sales = 8.90
+[[peer]]
+name = "Fuyao Glass"
+url = "https://stockanalysis.com/quote/sha/600660/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 13.20
+ev_sales = 2.96
+[[peer]]
+name = "Wacker Chemie"
+url = "https://stockanalysis.com/quote/etr/WCH/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 26.94
+ev_sales = 0.81
+[[peer]]
+name = "Tokuyama"
+url = "https://stockanalysis.com/quote/tyo/4043/statistics/"
+quoted = "Nov. 2, 2026"
+ev_ebit = 12.65
+ev_sales = 1.15
+[[peer]]
+name = "OCI Holdings"
+url = "https://stockanalysis.com/quote/krx/010060/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 81.37
+ev_sales = 1.48
+[[peer]]
+name = "T1 Energy"
+url = "https://stockanalysis.com/stocks/te/statistics/"
+quoted = "Nov. 3, 2026"
+ev_sales = 1.46
+[[peer]]
+name = "First Solar"
+url = "https://stockanalysis.com/stocks/fslr/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 9.67
+ev_sales = 3.64
+[[peer]]
+name = "Avantor"
+url = "https://stockanalysis.com/stocks/avtr/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 26.11
+ev_sales = 2.08
+[[peer]]
+name = "Thermo Fisher"
+url = "https://stockanalysis.com/stocks/tmo/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 31.93
+ev_sales = 6.09
+[[peer]]
+name = "Danaher"
+url = "https://stockanalysis.com/stocks/dhr/statistics/"
+quoted = "Nov. 3, 2026"
+ev_ebit = 32.44
+ev_sales = 7.13

@@ -1,0 +1,8 @@
+# Copy to settings.toml on the computer that runs the EDGAR sensor. settings.toml stays out of the repository.
+# SEC asks automated tools to declare who they are.
+# Rule: https://www.sec.gov/about/webmaster-frequently-asked-questions (reviewed Aug. 23, 2024)
+
+[sec]
+name = "investor-os"                # first part of the User-Agent
+email = "you@example.com"           # contact address SEC can reach. Sent to SEC hosts only.
+requests_per_second = 8             # SEC's maximum is 10. The script refuses 10 or more.

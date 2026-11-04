@@ -1,0 +1,21 @@
+# The monthly hunt and the event run. Claude's choices, for the owner to correct.
+
+[hunt]
+take = 5                # owner's pick rule, Nov. 3, 2026: top five
+max_pulls = 25          # most companies to look up on SEC in one run
+us_only = true          # owner's lens on Nov. 3, 2026. "US" means incorporated in the US on SEC's filing list
+peak_flag = 3.0         # show a flag when the last audited year is this many times the best earlier year
+open_price_domain = "stockanalysis.com"
+aaa = 0.0612
+aaa_src = "[FRED AAA, Oct. 2026, downloaded Nov. 3, 2026](https://fred.stlouisfed.org/series/AAA)"
+
+# The watchlist has no file of its own. Micron: Research/2026-11-03 Triage.md, owner's ruling, Nov. 3, 2026.
+[[watch]]
+ticker = "MU"
+look_again = "2026-12"
+
+[events]
+# A note with no CIK, or not incorporated in the US, files no 8-K this run reads. events.py lists them each time.
+# SEC leaves Broadcom's state blank. A blank counts as US only with a US business address and a 10-K or 10-Q on the list.
+portfolio = "Portfolio/Paper portfolio.md"
+theses = "sensors/reviews/theses.toml"

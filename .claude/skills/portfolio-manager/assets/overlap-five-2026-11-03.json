@@ -1,0 +1,28 @@
+{
+ "label": "Made-up five names from overlap.html",
+ "as_of": "2026-11-03",
+ "portfolio": {
+  "source": "overlap.html: equal parts, 20% each, no cash. On $100,000, the figure Rules/sizing.md uses. Not in Portfolio/",
+  "cash": 0,
+  "positions": {"GLW": 20000, "APH": 20000, "AVGO": 20000, "NVDA": 20000, "VZ": 20000}
+ },
+ "companies": [
+  {"name": "Corning", "ticker": "GLW", "run": "sensors/valuation/runs/2026-11-03-01.json", "downside_if_wrong": 0,
+   "thesis": "draft", "skeptic": "did_not_survive", "kill_line_crossed": false,
+   "scores": {"mechanism": 0, "record": 1, "customers": 1, "kill_lines": 1, "unknowns": 0}, "scores_status": "claude_reading", "rose_through_trim": null},
+  {"name": "Amphenol", "ticker": "APH"},
+  {"name": "Broadcom", "ticker": "AVGO"},
+  {"name": "NVIDIA", "ticker": "NVDA"},
+  {"name": "Verizon", "ticker": "VZ"}
+ ],
+ "groups": [
+  {"name": "AI data center spending", "status": "proposed",
+   "event": "a cut in AI spending",
+   "members": ["GLW", "APH", "AVGO", "NVDA"],
+   "evidence": "overlap.html, Nov. 3, 2026, Claude's reading of filings. Crosses Corning's K9 on claim C1. The other three have no thesis, so the formal test cannot run for them."}
+ ],
+ "open_questions": [
+  "Corning's K2 names Verizon: if Verizon ends or reduces its fiber deal, K2 is crossed. That joins them only if it is the event that would most surely break a Verizon thesis, and none exists. Not counted as a group.",
+  "It could be three: a thesis on Amphenol's other markets might survive a cut in AI spending. overlap.html, Nov. 3, 2026."
+ ]
+}

@@ -1,0 +1,156 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Corning's network</title><style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink-2:#52514e;--muted:#6f6d68;--grid:#e1e0d9;--border:rgba(11,11,11,.10);--link:#1c5cab;--band:#e3edf9;--chip:#eeede8;--on:#1c5cab;--on-ink:#fff;--edge:#a9a79f;--c-customer:#2a78d6;--c-rival:#eb6834;--c-partner:#1baf7a;--c-other:#6250d6;--c-hub:#0b0b0b}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink-2:#c3c2b7;--muted:#a3a198;--grid:#2c2c2a;--border:rgba(255,255,255,.10);--link:#7db2f0;--band:#1b2a3d;--chip:#2c2c2a;--on:#7db2f0;--on-ink:#0d0d0d;--edge:#6b6a64;--c-customer:#3987e5;--c-rival:#d95926;--c-partner:#199e70;--c-other:#9085e9;--c-hub:#f0efec}}
+:root[data-theme="dark"]{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink-2:#c3c2b7;--muted:#a3a198;--grid:#2c2c2a;--border:rgba(255,255,255,.10);--link:#7db2f0;--band:#1b2a3d;--chip:#2c2c2a;--on:#7db2f0;--on-ink:#0d0d0d;--edge:#6b6a64;--c-customer:#3987e5;--c-rival:#d95926;--c-partner:#199e70;--c-other:#9085e9;--c-hub:#f0efec}
+*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1520px;margin:0 auto;padding:32px 16px 48px}h1{font-size:25px;line-height:1.25;margin:0 0 10px;font-weight:650}h2{font-size:19px;margin:36px 0 6px;font-weight:650}h3{font-size:15px;margin:16px 0 6px;font-weight:650}
+a{color:var(--link)}.lede{font-size:16px;margin:0 0 8px}.sub{color:var(--ink-2);margin:0 0 12px}
+.banner{background:var(--band);border-radius:8px;padding:12px 14px;margin:14px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:16px 0}.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px}.stat b{display:block;font-size:22px;font-weight:650;line-height:1.2}.stat span{color:var(--ink-2);font-size:13px}
+.bar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:10px 0}.bar label{font-size:13px;color:var(--ink-2)}.grp{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+button.c,select{font:inherit;font-size:13px;background:var(--chip);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;min-height:30px}button.c[aria-pressed=true]{background:var(--on);color:var(--on-ink);border-color:var(--on)}select{max-width:100%}
+button:focus-visible,select:focus-visible,a:focus-visible,g[tabindex]:focus-visible{outline:2px solid var(--on);outline-offset:2px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;align-items:start}
+.mapwrap{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow-x:auto}svg#map{display:block;width:100%;min-width:860px;height:auto}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;max-height:860px;overflow:auto;font-size:14px}.panel h3{margin-top:0;font-size:16px}.panel h4{font-size:13px;margin:12px 0 4px;font-weight:650}.panel ul{margin:0;padding-left:0;list-style:none}.panel li{margin:0 0 9px}.panel .m{color:var(--ink-2);font-size:13px}
+button.nl{font:inherit;background:none;border:0;padding:0;color:var(--link);text-decoration:underline;cursor:pointer}
+.tag{display:inline-block;font-size:11.5px;border:1px solid var(--border);background:var(--chip);border-radius:4px;padding:0 5px;margin-right:3px;white-space:nowrap}.badge{display:inline-flex;width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--page);font-size:11.5px;font-weight:650;align-items:center;justify-content:center;margin-right:5px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--ink-2);margin:8px 0}.legend span{display:inline-flex;align-items:center;gap:5px}.dot{width:12px;height:12px;border-radius:50%;display:inline-block}.ln{display:inline-block;width:26px;border-top:2px solid var(--muted)}
+text{font-family:inherit}.nlabel{font-size:13.5px;fill:var(--ink);font-weight:550;paint-order:stroke;stroke:var(--surface);stroke-width:3.5px;stroke-linejoin:round;pointer-events:none}
+.elabel{font-size:11.5px;fill:var(--ink-2);paint-order:stroke;stroke:var(--surface);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.e{stroke:var(--edge);stroke-width:1.3;fill:none}.e.weak{stroke-width:1;opacity:.75}.e.competes{stroke-dasharray:6 4}.e.partners{stroke-dasharray:1.5 4;stroke-linecap:round;stroke-width:2}
+.hit{stroke:transparent;stroke-width:12;fill:none;cursor:pointer}.nd{cursor:pointer}.nd circle.b{stroke:var(--surface);stroke-width:2}.nd.nonote circle.b{fill:var(--surface)!important;stroke-width:2.2;stroke-dasharray:3 2}
+.dim{opacity:.13}.lit .e{stroke:var(--ink);stroke-width:2.2;opacity:1}.lit .elabel{fill:var(--ink);font-weight:600}.ring{fill:none;stroke:var(--ink);stroke-width:2.2}.bdg{fill:var(--ink)}.bdgt{fill:var(--page);font-size:11px;font-weight:700;text-anchor:middle;pointer-events:none}.hide{display:none}
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--surface)}table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:980px}th,td{text-align:left;vertical-align:top;padding:7px 9px;border-bottom:1px solid var(--grid)}th{font-weight:650;color:var(--ink-2);font-size:12.5px}tr:last-child td{border-bottom:0}
+.tip{position:fixed;display:none;max-width:320px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:7px 9px;font-size:12.5px;box-shadow:0 2px 10px rgba(0,0,0,.18);pointer-events:none;z-index:5}
+.steps{margin:0;padding-left:20px}.steps li{margin:0 0 6px}ul.cant{padding-left:18px}ul.cant li{margin:0 0 7px}
+@media (max-width:980px){.layout{grid-template-columns:minmax(0,1fr)}.panel{max-height:none}}
+</style></head><body><main>
+<h1>Corning's network: almost every path runs through Corning</h1>
+<p class="lede">Of {{links}} typed links, {{off}} do not touch Corning. So a walk reaches most fiber companies in two steps, and that says as much about how this vault was built as about the industry. We researched outward from Corning.</p>
+<p class="sub">{{strong}} links are stated in a source or by two filings read together. {{weak}} are conditional, reported second hand or my reading, and each shows a "?". {{isolated}} of {{notes}} note companies have no supported link at all: Linde, Umicore and STL.</p>
+<div class="banner">Written Nov. 3, 2026, from the notes in <code>Companies/</code> and their sources. Base value is not defined yet, so this page gives no buy, trim or sell view. No thesis is written. A lit company shows that a link exists, not that the event will reach it or by how much. The "Reading" lines are mine, for you to correct. Public evidence, not firsthand.</div>
+<div class="stats"><div class="stat"><b>{{links}}</b><span>typed links, each with a source and a date</span></div><div class="stat"><b>{{off}} of {{links}}</b><span>links that do not touch Corning</span></div><div class="stat"><b>{{dollar}}</b><span>links with any money figure. Do not add them: deals may overlap</span></div><div class="stat"><b>{{isolated}}</b><span>note companies with no supported link</span></div></div>
+
+<h2>The map</h2>
+<div class="bar" role="group" aria-label="Mode"><div class="grp"><button class="c" id="mBrowse" aria-pressed="true">Browse</button><button class="c" id="mWalk" aria-pressed="false">Walk</button></div>
+<div class="grp" id="fType" aria-label="Link type"></div><div class="grp" id="fChain" aria-label="Chain"></div></div>
+<div class="bar hide" id="walkbar"><label>Company <select id="wCo"></select></label><label>Event <select id="wEv"></select></label>
+<div class="grp" aria-label="Steps shown"><button class="c" data-s="0" aria-pressed="false">Start</button><button class="c" data-s="1" aria-pressed="false">1 step</button><button class="c" data-s="2" aria-pressed="true">2 steps</button></div>
+<div class="grp"><button class="c" id="allCh" aria-pressed="false">All chains</button></div></div>
+<div class="legend" id="legend"></div>
+<div class="layout"><div class="mapwrap"><svg id="map" viewBox="30 10 1120 840" role="img" aria-label="Network map of Corning's customers, partners and rivals. The table below lists every link."></svg></div><aside class="panel" id="panel" aria-live="polite"></aside></div>
+
+<h2>One example, walked: NVIDIA's partnership with Corning ends</h2>
+<p class="sub">This is a stress test, not a forecast. No source says it is likely. I chose it because NVIDIA's is the only deal traced into Corning's reported numbers (<a href="corning-deals-vs-prepayments.html">deals page, Nov. 2, 2026</a>), and because it is the one case with two routes.</p>
+<ol class="steps" id="worked"></ol>
+<p><button class="c" id="runEx">Run this on the map</button></p>
+
+<h2>How the walk works</h2>
+<ul>
+<li><b>It follows the event's chain.</b> A fiber event travels fiber links only, so a solar or cover glass customer stays dark. "All chains" turns this off.</li>
+<li><b>It runs both ways along a link.</b> A customer's trouble reaches its supplier, and a supplier's trouble reaches its customers.</li>
+<li><b>One step</b> means a direct typed link. <b>Two steps</b> means through one company in between. Each company shows at its shortest distance, and extra routes are listed.</li>
+<li><b>It does not size anything.</b> Most shares of sales are not disclosed, so light means possible, not large. A weak link makes the whole path weak.</li>
+<li><b>Click any company</b> in Walk mode to start from it. "Any event" follows all of its links.</li>
+</ul>
+
+<h2>Every link</h2>
+<div class="tw"><table><thead><tr><th>From</th><th>Link</th><th>To</th><th>Chain</th><th>What</th><th>Size</th><th>Evidence</th><th>Source</th></tr></thead><tbody id="rows"></tbody></table></div>
+
+<h2>What I could not support</h2>
+<p class="sub">None of these is drawn. The same items sit in each company's note.</p>
+<ul class="cant"><!--CANNOT--></ul>
+
+<h2>Method and limits</h2>
+<p class="sub">Built from the "Typed links" tables in the notes, and the build fails if the two sides of a link differ. Sources are those already cited in the vault. A few were reopened on Nov. 3, 2026 to check their wording, through a page-reading tool that returns extracts, so quotes were not matched to the pages by script. Moneycontrol refused, so that link rests on Exa's copy. Transcripts are third party and may hold errors. Hemlock Semiconductor is treated as part of Corning. Grey dashed companies have no note yet. The four rival groups are single nodes because Corning's 10-K names them and the vault has not read them. This page stays on this computer.</p>
+</main><div class="tip" id="tip"></div>
+<script>
+const D=/*DATA*/;
+const NS='http://www.w3.org/2000/svg',$=s=>document.querySelector(s),svg=$('#map'),panel=$('#panel');
+const N=Object.fromEntries(D.nodes.map(n=>[n.id,n]));
+const KIND={supplies:'supplies',competes:'competes with',partners:'partners with'};
+const TN={hub:'Corning',customer:'Customer of Corning',partner:'Partner of Corning',rival:'Rival of Corning',other:'No direct link to Corning'};
+const WEAK=e=>!['Stated','Read together'].includes(e.ev);
+const R=n=>n.type==='hub'?26:(n.note?13:10);
+const el=(t,a={},p)=>{const x=document.createElementNS(NS,t);for(const k in a)x.setAttribute(k,a[k]);if(p)p.appendChild(x);return x};
+const st={mode:'browse',types:new Set(Object.keys(KIND)),chains:new Set(D.edges.map(e=>e.chain)),ev:null,src:null,step:2,all:false,sel:null};
+const defs=el('defs',{},svg);const mk=el('marker',{id:'ar',viewBox:'0 0 8 8',refX:7,refY:4,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'},defs);el('path',{d:'M0 0L8 4L0 8z',style:'fill:var(--edge)'},mk);
+const mk2=el('marker',{id:'arl',viewBox:'0 0 8 8',refX:7,refY:4,markerWidth:6,markerHeight:6,orient:'auto-start-reverse'},defs);el('path',{d:'M0 0L8 4L0 8z',style:'fill:var(--ink)'},mk2);
+el('rect',{x:800,y:748,width:330,height:92,rx:8,style:'fill:none;stroke:var(--grid)'},svg);
+const nolab=el('text',{x:812,y:766,class:'elabel',style:'font-size:11.5px'},svg);nolab.textContent='No supported link to any company on the map';
+const gE=el('g',{},svg),gN=el('g',{},svg),tip=$('#tip');
+const pairs={};D.edges.forEach(e=>{const k=[e.a,e.b].sort().join('|');(pairs[k]=pairs[k]||[]).push(e)});
+D.edges.forEach((e,i)=>{e.i=i;const a=N[e.a],b=N[e.b],pk=pairs[[e.a,e.b].sort().join('|')],idx=pk.indexOf(e),off=pk.length>1?(idx-(pk.length-1)/2)*11:0;
+ let dx=b.x-a.x,dy=b.y-a.y,L=Math.hypot(dx,dy);const ux=dx/L,uy=dy/L,sx=-uy*off,sy=ux*off;
+ const x1=a.x+ux*(R(a)+2)+sx,y1=a.y+uy*(R(a)+2)+sy,x2=b.x-ux*(R(b)+3)+sx,y2=b.y-uy*(R(b)+3)+sy;
+ const g=el('g',{class:'eg','data-i':i},gE);
+ const ln=el('line',{x1,y1,x2,y2,class:'e '+e.k+(WEAK(e)?' weak':'')},g);if(e.k==='supplies')ln.setAttribute('marker-end','url(#ar)');
+ const hit=el('line',{x1,y1,x2,y2,class:'hit'},g);
+ const t=pk.length>1?(idx?.74:.5):(e.b==='Heliene'&&e.k==='partners'?.4:(e.a==='Corning'?.66:(e.b==='Corning'?.34:.5)));const mx=x1+(x2-x1)*t,my=y1+(y2-y1)*t;
+ const lb=el('text',{x:mx,y:my+3,'text-anchor':'middle',class:'elabel'},g);lb.textContent=(e.k==='competes'?'competes':e.k==='partners'?'partners':'supplies')+(e.short?', '+e.short:'')+(WEAK(e)?' ?':'');
+ e.g=g;e.ln=ln;
+ hit.addEventListener('mousemove',ev=>showTip(ev,`<b>${e.a} ${KIND[e.k]} ${e.b}</b><br>${e.what}<br><span style="color:var(--ink-2)">${e.ev}. Click for the source.</span>`));hit.addEventListener('mouseleave',hideTip);
+ hit.addEventListener('click',()=>showEdge(e));
+});
+D.nodes.forEach(n=>{const g=el('g',{class:'nd'+(n.note?'':' nonote'),tabindex:0,role:'button','aria-label':n.id+'. '+TN[n.type]+(n.note?'':'. No note yet'),transform:`translate(${n.x},${n.y})`},gN);n.g=g;
+ const c=el('circle',{r:R(n),class:'b',style:n.note?`fill:var(--c-${n.type})`:`stroke:var(--c-${n.type})`},g);
+ const below=n.y>=n.g.ownerSVGElement.viewBox.baseVal.height/2-40||n.type==='hub';
+ const tx=el('text',{y:n.type==='hub'?44:R(n)+15,'text-anchor':'middle',class:'nlabel'},g);tx.textContent=n.id;if(n.type==='hub')tx.style.fontSize='15px';
+ n.badge=el('g',{class:'hide',transform:`translate(${R(n)-1},${-R(n)+1})`},g);el('circle',{r:8.5,class:'bdg'},n.badge);n.bt=el('text',{y:4,class:'bdgt'},n.badge);n.ring=el('circle',{r:R(n)+3.5,class:'ring hide'},g);
+ g.addEventListener('mousemove',ev=>showTip(ev,`<b>${n.id}</b><br>${TN[n.type]}${n.note?'':'. No note yet'}`));g.addEventListener('mouseleave',hideTip);
+ const go=()=>{hideTip();if(st.mode==='walk')startWalk(n.id);else showNode(n.id)};g.addEventListener('click',go);g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();go()}});
+});
+function showTip(ev,h){tip.innerHTML=h;tip.style.display='block';tip.style.left=Math.min(ev.clientX+14,innerWidth-335)+'px';tip.style.top=Math.min(ev.clientY+14,innerHeight-120)+'px'}function hideTip(){tip.style.display='none'}
+const lg=$('#legend');lg.innerHTML=[['customer','Customer'],['partner','Partner'],['rival','Rival'],['other','No direct link']].map(([t,l])=>`<span><i class="dot" style="background:var(--c-${t})"></i>${l}</span>`).join('')+`<span><i class="dot" style="border:2px dashed var(--muted)"></i>No note yet</span><span><i class="ln"></i>supplies, arrow to the customer</span><span><i class="ln" style="border-top-style:dashed"></i>competes</span><span><i class="ln" style="border-top-style:dotted;border-top-width:3px"></i>partners</span><span>? weak evidence</span><span>Colour is the company's role with Corning</span>`;
+function chips(box,items,set,lab){items.forEach(it=>{const b=document.createElement('button');b.className='c';b.textContent=lab(it);b.setAttribute('aria-pressed','true');b.onclick=()=>{set.has(it)?set.delete(it):set.add(it);b.setAttribute('aria-pressed',set.has(it));draw()};box.appendChild(b)})}
+chips($('#fType'),Object.keys(KIND),st.types,k=>KIND[k]);chips($('#fChain'),[...st.chains],st.chains,c=>c);
+function walk(src,chain,all){const on=e=>all||e.chain===chain;const nb={};D.edges.filter(on).forEach(e=>{(nb[e.a]=nb[e.a]||[]).push([e.b,e]);(nb[e.b]=nb[e.b]||[]).push([e.a,e])});
+ const s1={},s2={},extra={};(nb[src]||[]).forEach(([o,e])=>{(s1[o]=s1[o]||[]).push(e)});
+ Object.keys(s1).forEach(m=>(nb[m]||[]).forEach(([o,e])=>{if(o===src)return;if(s1[o]){(extra[o]=extra[o]||{});(extra[o][m]=extra[o][m]||[]).push(e)}else{(s2[o]=s2[o]||{});(s2[o][m]=s2[o][m]||[]).push(e)}}));return{s1,s2,extra}}
+function roleOf(node,e){if(N[node].type==='rival'||e.k==='competes')return'rival';if(e.k==='partners')return'partner';return e.b===node?'customer':'supplier'}
+function evid(es){return [...new Set(es.map(e=>e.ev))].join(', ')}
+function walkHTML(r,ev,src,step){const row=(n,html)=>`<li><span class="badge">${html}</span><button class="nl" data-n="${n}">${n}</button>`;let h='';
+ if(step>=1){h+=`<h4>One step away: ${Object.keys(r.s1).length}</h4><ul>`+(Object.keys(r.s1).map(n=>{const es=r.s1[n];const txt=ev&&ev.direct&&ev.direct[n];const ex=r.extra[n]?Object.keys(r.extra[n]).map(m=>`<br><span class="m">Also two steps, through ${m}.</span>`).join(''):'';
+   return row(n,1)+`<span class="m"> ${es.map(e=>`${e.a} ${KIND[e.k]} ${e.b}`).join('; ')}. ${evid(es)}.</span><br>${txt?'<b>Reading:</b> '+txt:(ev?'<b>Reading:</b> not written for this link.':'')}${ex}<br><span class="m">${es.map(e=>e.src).join('; ')}</span></li>`}).join('')||'<li class="m">None.</li>')+'</ul>'}
+ if(step>=2){const ns=Object.keys(r.s2).sort();h+=`<h4>Two steps away: ${ns.length}</h4><ul>`+(ns.map(n=>{const routes=r.s2[n];const m=Object.keys(routes)[0],e=routes[m][0];const role=roleOf(n,e);const txt=ev&&ev.roles&&ev.roles[role];
+   return row(n,2)+`<span class="m"> ${Object.keys(routes).map(v=>`${src} to ${v}, then ${routes[v].map(x=>`${x.a} ${KIND[x.k]} ${x.b}`).join('; ')}`).join('. Or ')}. ${evid(Object.values(routes).flat())}.</span>${txt?'<br><b>Reading:</b> '+txt:''}</li>`}).join('')||'<li class="m">None.</li>')+'</ul>'}
+ return h}
+function draw(){const walkOn=st.mode==='walk'&&st.src;let r=null;if(walkOn)r=walk(st.src,st.ev?st.ev.chain:null,st.all||!st.ev);
+ const show=new Set();if(walkOn){show.add(st.src);if(st.step>=1)Object.keys(r.s1).forEach(x=>show.add(x));if(st.step>=2)Object.keys(r.s2).forEach(x=>show.add(x))}
+ const litE=new Set();if(walkOn){if(st.step>=1)Object.values(r.s1).flat().forEach(e=>litE.add(e));if(st.step>=2){Object.values(r.s2).forEach(o=>Object.values(o).flat().forEach(e=>litE.add(e)));Object.values(r.extra).forEach(o=>Object.values(o).flat().forEach(e=>litE.add(e)))}}
+ D.edges.forEach(e=>{const vis=st.types.has(e.k)&&st.chains.has(e.chain);let cls='eg';if(walkOn){cls+=litE.has(e)?' lit':' dim'}else{if(!vis)cls+=' hide';if(st.sel&&e.a!==st.sel&&e.b!==st.sel)cls+=' dim';if(st.sel&&(e.a===st.sel||e.b===st.sel))cls+=' lit'}e.g.setAttribute('class',cls);if(e.k==='supplies')e.ln.setAttribute('marker-end',cls.includes('lit')?'url(#arl)':'url(#ar)')});
+ D.nodes.forEach(n=>{let cls='nd'+(n.note?'':' nonote');n.badge.setAttribute('class','hide');n.ring.setAttribute('class','ring hide');
+  if(walkOn){if(!show.has(n.id))cls+=' dim';else if(n.id===st.src){n.ring.setAttribute('class','ring')}else{n.badge.removeAttribute('class');n.bt.textContent=r.s1[n.id]?1:2}}
+  else if(st.sel){const near=n.id===st.sel||D.edges.some(e=>(e.a===st.sel&&e.b===n.id)||(e.b===st.sel&&e.a===n.id));if(!near)cls+=' dim';if(n.id===st.sel)n.ring.setAttribute('class','ring')}
+  n.g.setAttribute('class',cls)});
+ if(walkOn)renderWalk(r)}
+function renderWalk(r){const ev=st.ev;panel.innerHTML=`<h3>${st.src}${ev?': '+ev.title:': any event'}</h3>${ev?`<p class="m">${ev.status}. Chain: ${st.all?'all':ev.chain}.<br>${ev.src}</p>`:'<p class="m">No event chosen, so this follows all of its links.</p>'}`+walkHTML(r,ev,st.src,st.step)+(ev&&ev.off?`<h4>Off the walk</h4><p>${ev.off}</p>`:'');bindNL()}
+function bindNL(){panel.querySelectorAll('button.nl').forEach(b=>b.onclick=()=>{const n=b.dataset.n;if(!N[n])return;if(st.mode==='walk')startWalk(n);else showNode(n)})}
+function linkLi(e){return`<li><span class="tag">${e.ev}</span><span class="tag">${e.chain}</span><b>${e.a} ${KIND[e.k]} ${e.b}</b><br>${e.what}.<br><span class="m">Size: ${e.size}.<br>${e.src}</span></li>`}
+function showNode(id){st.sel=id;const n=N[id],es=D.edges.filter(e=>e.a===id||e.b===id);panel.innerHTML=`<h3>${id}</h3><p class="m">${TN[n.type]}${n.note?'':'. No note yet'}. ${es.length} typed link${es.length===1?'':'s'}.</p>`+(es.length?`<ul>${es.map(linkLi).join('')}</ul>`:'<p>None supported.</p>')+(n.other.length?`<h4>Other links, none of the four types</h4><ul>${n.other.map(x=>`<li>${x}</li>`).join('')}</ul>`:'')+(n.bad.length?`<h4>Could not support</h4><ul>${n.bad.map(x=>`<li>${x}</li>`).join('')}</ul>`:'');bindNL();draw()}
+function showEdge(e){if(st.mode==='walk')return;st.sel=null;panel.innerHTML=`<h3>${e.a} ${KIND[e.k]} ${e.b}</h3><ul>${linkLi(e)}</ul>`;bindNL();draw()}
+function intro(){panel.innerHTML=`<h3>Click a company or a link</h3><p>Browse shows each link with its size, evidence and source, and what could not be supported. Walk picks an event and lights up who it could reach.</p><p class="m">Corning sits in the middle. Rivals are to the lower right, solar to the lower left, carriers to the upper left and data center buyers to the upper right.</p>`}
+const wCo=$('#wCo'),wEv=$('#wEv');
+[...D.nodes].sort((a,b)=>a.id.localeCompare(b.id)).forEach(n=>{const o=document.createElement('option');o.value=o.textContent=n.id;wCo.appendChild(o)});
+function fillEv(id){wEv.innerHTML='';D.events.filter(e=>e.at===id).forEach(e=>{const o=document.createElement('option');o.value=e.id;o.textContent=e.title;wEv.appendChild(o)});const o=document.createElement('option');o.value='';o.textContent='Any event (all links)';wEv.appendChild(o)}
+function setMode(m){st.mode=m;$('#mBrowse').setAttribute('aria-pressed',m==='browse');$('#mWalk').setAttribute('aria-pressed',m==='walk');$('#walkbar').classList.toggle('hide',m!=='walk');$('#fType').classList.toggle('hide',m==='walk');$('#fChain').classList.toggle('hide',m==='walk');if(m==='browse'){st.src=null;st.ev=null;intro();draw()}else{st.sel=null;if(!st.src)startEvent('nvidia-ends')}}
+function setStep(s){st.step=s;document.querySelectorAll('[data-s]').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.s===s))}
+function startEvent(id){const ev=D.events.find(e=>e.id===id);st.ev=ev;st.src=ev.at;wCo.value=ev.at;fillEv(ev.at);wEv.value=id;draw()}
+function startWalk(id){st.src=id;wCo.value=id;fillEv(id);const f=D.events.find(e=>e.at===id);st.ev=f||null;wEv.value=f?f.id:'';draw()}
+wCo.onchange=()=>startWalk(wCo.value);wEv.onchange=()=>{st.ev=D.events.find(e=>e.id===wEv.value)||null;draw()};
+document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{setStep(+b.dataset.s);draw()});
+$('#allCh').onclick=()=>{st.all=!st.all;$('#allCh').setAttribute('aria-pressed',st.all);draw()};
+$('#mBrowse').onclick=()=>setMode('browse');$('#mWalk').onclick=()=>setMode('walk');
+$('#runEx').onclick=()=>{setMode('walk');st.all=false;$('#allCh').setAttribute('aria-pressed',false);setStep(2);startEvent('nvidia-ends');$('#map').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'})};
+$('#rows').innerHTML=[...D.edges].sort((x,y)=>(y.a==='Corning')-(x.a==='Corning')||x.k.localeCompare(y.k)).map(e=>`<tr><td>${e.a}</td><td>${KIND[e.k]}</td><td>${e.b}</td><td>${e.chain}</td><td>${e.what}</td><td>${e.size}</td><td>${e.ev}</td><td>${e.src}</td></tr>`).join('');
+(function(){const ev=D.events[0],r=walk(ev.at,ev.chain,false),s1=Object.keys(r.s1),s2=Object.keys(r.s2).sort(),cust=s2.filter(n=>roleOf(n,r.s2[n][Object.keys(r.s2[n])[0]][0])==='customer'),riv=s2.filter(n=>roleOf(n,r.s2[n][Object.keys(r.s2[n])[0]][0])==='rival'),par=s2.filter(n=>roleOf(n,r.s2[n][Object.keys(r.s2[n])[0]][0])==='partner');
+const dark=D.nodes.filter(n=>n.id!==ev.at&&!s1.includes(n.id)&&!s2.includes(n.id)).map(n=>n.id);
+$('#worked').innerHTML=`<li><b>Start: NVIDIA, fiber chain.</b> ${ev.src}</li>
+<li><b>One step: ${s1.join(' and ')}.</b> ${ev.direct.Corning} ${ev.direct.Zayo}</li>
+<li><b>Two steps, through Corning: ${s2.length} companies.</b> Customers: ${cust.join(', ')}. Partner: ${par.join(', ')}. Rivals: ${riv.join(', ')}. Direction is unknown for all of them: the plants NVIDIA backs could slip, or its volume could free up. Most of this is the hub at work, so read it as a list of who to check, not as an effect.</li>
+<li><b>The one thing the map adds: Zayo has two routes.</b> It is reached directly through its NVIDIA build, and again through Corning, which supplies its fiber. Every other customer here is reached only through Corning.</li>
+<li><b>What stays dark: ${dark.length} companies.</b> ${dark.join(', ')}. They have no fiber link within two steps, or no link at all.</li>`})();
+intro();draw();
+const h=location.hash.slice(1);if(h){const p=new URLSearchParams(h);if(p.get('theme'))document.documentElement.dataset.theme=p.get('theme');if(p.get('walk')){setMode('walk');startEvent(p.get('walk'))}if(p.get('step')){setStep(+p.get('step'));draw()}if(p.get('node')){showNode(p.get('node'))}}
+</script></body></html>

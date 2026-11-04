@@ -1,0 +1,29 @@
+# Companies the weekly thesis check covers. Claude's list, for the owner to correct.
+# Owner's ruling, Nov. 4, 2026: only notes with kill lines count. weekly.py skips an entry whose kill note has none.
+# A kill-criteria note in Research/ with no entry here makes weekly.py print a problem.
+
+# Sites the weekly run may open with WebFetch. A lead elsewhere is listed as unread and cannot raise an Orange.
+# SEC goes through weekly.py sec, never WebFetch. No price site: the run never reads a price.
+open_domains = ["fool.com", "www.fool.com", "investor.corning.com", "www.corning.com", "about.fb.com", "about.att.com", "www.verizon.com", "news.lumen.com", "www.zayo.com", "www.aboutamazon.com", "blogs.microsoft.com", "nvidianews.nvidia.com", "www.prnewswire.com", "www.businesswire.com", "www.reuters.com", "www.cnbc.com", "www.fierce-network.com", "www.lightwaveonline.com", "www.lightreading.com", "www.sdxcentral.com", "www.telecompetitor.com", "www.manufacturingdive.com", "broadbandbreakfast.com", "www.cablinginstall.com", "www.earningswhispers.com", "stockanalysis.com", "www.investing.com", "singjupost.com"]
+
+[[company]]
+name = "Corning"
+ticker = "GLW"
+note = "Companies/Corning.md"
+thesis = "Research/2026-11-03 Corning thesis draft.md"
+thesis_status = "draft, not approved"
+kill = "Research/2026-11-03 Corning kill criteria.md"
+claims = ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]
+lines = ["K1", "K2", "K3", "K4", "K5", "K6", "K7", "K8", "K9"]
+# Generic on purpose, as Playbooks/Web search with Agent Reach.md asks: no holdings, sizes or private thoughts.
+queries = [
+  { q = "Corning optical fiber supply agreement news", tests = "C2 K2" },
+  { q = "Meta Amazon Microsoft NVIDIA fiber deal Corning cancelled reduced", tests = "C2 K2" },
+  { q = "AT&T Verizon Lumen Zayo fiber deal Corning cancelled reduced", tests = "C2 K2" },
+  { q = "optical fiber shortage price 2026", tests = "C1 C3" },
+  { q = "hyperscaler capital spending cut data center", tests = "C1 K9" },
+  { q = "Prysmian Fujikura Furukawa YOFC fiber capacity expansion", tests = "C3" },
+  { q = "Corning at-the-market offering shares cash flow customer funded plants", tests = "C5 K6" },
+  { q = "Corning Solar Hemlock wafer ramp display glass price", tests = "C6" },
+  { q = "Corning optical scale-up co-packaged optics timing 2028", tests = "C7 K7 C4 C8" },
+]

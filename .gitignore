@@ -1,0 +1,52 @@
+# What stays on this computer only. The reasons are on cloud.html.
+# Anything named here never goes to GitHub or a cloud session.
+
+# --- Secrets and personal addresses ---
+# The Telegram token already lives outside this folder (~/.config/investor-os/). These lines catch a slip.
+.env
+.env.*
+*.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+secrets*
+credentials*
+.mcp.json
+.streamlit/secrets.toml
+.claude/settings.local.json
+CLAUDE.local.md
+# Holds my personal email, the contact SEC asks for. settings.example.toml goes up instead.
+sensors/edgar/settings.toml
+
+# --- My real money ---
+# Default is closed: a new file here stays local unless it is named below.
+Portfolio/*
+!Portfolio/README.md
+!Portfolio/Paper portfolio.md
+# My own action, size and reason on each decision. Sizes turn real the day I hold something.
+Journal/decisions/*
+!Journal/decisions/README.md
+
+# --- Data I said stays on this computer (Yahoo, Moody's, S&P through Shiller, FRED) ---
+# Every page in the root is rebuilt here from these. Only cloud.html goes up, because it holds no such data.
+/*.html
+!/cloud.html
+sensors/*/cache/
+sensors/*/downloads/
+sensors/*/runs/
+sensors/*/samples/
+
+# --- This computer's own state ---
+sensors/8k-watch/seen.json
+sensors/daily/state.json
+sensors/radar/state.json
+.claude/guardrails/
+.claude/worktrees/
+.obsidian/
+
+# --- Rebuilt anywhere ---
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

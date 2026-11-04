@@ -1,0 +1,9 @@
+[project]
+name = "investor-os"
+version = "0.1.0"
+description = "Data scripts for my investing research"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit>=1.66.1",
+    "yfinance>=1.7.0",
+]

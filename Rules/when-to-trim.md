@@ -1,0 +1,12 @@
+## When to trim
+
+- **If a rise takes the price above the trim-above price while the thesis is intact, I trim, unless I write in the Journal why not, with a dated fact.** The trim-above price is value. Value means the middle of the base range plus strategic value.
+- **How much.** I sell back to the size `sizing` gives today: the smaller of the grade's cap and 5% ÷ loss if wrong, on today's price, value and portfolio, ignoring the gates. At or under that size, there is no trim. With a grade of None, I set the amount and keep part. One sale per crossing, with no scaling out.
+- **When.** First refresh value from the newest 10-Q or 10-K, to check the crossing is real. Then decide within the week Orange gives me. The rule is the same at any age, since a trim keeps the rest.
+- **Strategic value is worked out this way:** for each scenario from the catalyst notes, take only what is not in the base value or the reported numbers. New profit × the base's votes, brought back at 9%, less the capital to build it, per diluted share. Multiply by its chance and add them up. Downsides count too.
+- **Refresh** after each 10-Q and 10-K, from the newest quarter. A chance changes only on a dated event, never on a price move. Changing the method needs my approval.
+- Strategic value still never counts toward covering the price.
+- Trimming means selling part of a position and keeping the rest. A higher price alone is never a reason to sell the whole position.
+- A broken thesis is a separate case. Tell me right away. **When I rule a thesis broken, I sell the whole position, whatever the price is doing, unless it earns its place again within 30 days:** a new thesis with its own kill lines, a skeptic's review I rule it survived, and the three gates in `sizing` on a refreshed value. Then it stays at no more than the size `sizing` gives today, and I sell the rest. Add nothing meanwhile.
+- **How much must break.** When I record a thesis, I mark each claim load-bearing or side. A claim is load-bearing if, knowing it false, I would not buy under the buy-below. Each thesis has at least one. One load-bearing claim broken, or two side claims, breaks the thesis. One side claim broken: rerun the grade and the value. A mark changes only on a dated event, never with an alert on that claim waiting.
+- **After a Red on a claim or a kill line, the claim must prove itself.** To rule that it holds, I name a dated, sourced fact that supports it. With none, I rule it broken.

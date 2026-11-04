@@ -1,0 +1,251 @@
+{
+ "company": "Corning",
+ "ticker": "GLW",
+ "as_of": "2026-11-03",
+ "note": "Reproduces base.html and strategic.html. The twelve-month earnings were corrected on Nov. 3, 2026, with the owner's approval, to include the $22M loss on investments. A dated record: copy and update it at each refresh, do not edit it.",
+ "inputs": {
+  "shares_diluted_m": {
+   "v": 871,
+   "src": "[10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm)"
+  },
+  "price": {
+   "v": 123.2,
+   "src": "close of Nov. 2, 2026, [Yahoo through yfinance, fetched Nov. 2, 2026](https://query1.finance.yahoo.com/v8/finance/chart/GLW?range=1d&interval=1d)"
+  },
+  "aaa": {
+   "v": 0.0612,
+   "src": "[FRED AAA, Oct. 2026, downloaded Nov. 3, 2026](https://fred.stlouisfed.org/series/AAA)"
+  },
+  "record_growth": {
+   "v": 0.031074,
+   "src": "free cash flow per share, FY2016 to FY2025, 3.1% (calc., `base.html`, Nov. 3, 2026; [10-K, filed Feb. 12, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000124/glw-20251231.htm))"
+  },
+  "earnings_m": {
+   "low": {
+    "v": 1028.4,
+    "src": "ten-year normal average, FY2016 to FY2025 (`normal.html`, adjustments owner confirmed Nov. 3, 2026)",
+    "status": "confirmed"
+   },
+   "mid": {
+    "v": 1543,
+    "src": "FY2025 normal (`normal.html`, owner confirmed Nov. 3, 2026; [10-K, filed Feb. 12, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000124/glw-20251231.htm))",
+    "status": "confirmed"
+   },
+   "high": {
+    "v": 2051,
+    "src": "twelve months to Sept. 30, 2026 (calc., `base.html`, Nov. 3, 2026; [10-K, filed Feb. 12, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000124/glw-20251231.htm); [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm); [Q3 release, Oct. 27, 2026](https://www.sec.gov/Archives/edgar/data/0000024741/000002474126000273/glw-20261027xex99xq32026.htm))",
+    "status": "confirmed"
+   }
+  },
+  "cash_m": {
+   "low": {
+    "v": 971,
+    "src": "only deposits received out (`worth.html`, Nov. 3, 2026; [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm))"
+   },
+   "mid": {
+    "v": 1256,
+    "src": "both sides out, an estimate (`worth.html`, Nov. 3, 2026; [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm))"
+   },
+   "high": {
+    "v": 1505,
+    "src": "whole filed deposits line out (`worth.html`, Nov. 3, 2026; [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm))"
+   }
+  },
+  "growth": {
+   "low": {
+    "v": 0,
+    "src": "no growth, approved on `base.html`, Nov. 3, 2026"
+   },
+   "mid": {
+    "v": 0.01723875573682343,
+    "src": "normal net income, FY2016 to FY2025 (calc., `base.html`, Nov. 3, 2026)"
+   },
+   "high": {
+    "v": 0.03,
+    "src": "the cap, under the 3.1% record, approved on `base.html`, Nov. 3, 2026"
+   }
+  },
+  "past_tags": {
+   "low": {
+    "v": 20.92241379310345,
+    "src": "lowest of ten year-end tags (calc., `multiples.html`, `base.html`, Nov. 3, 2026)"
+   },
+   "median": {
+    "v": 29.206447557471265,
+    "src": "median of ten year-end tags (calc., `multiples.html`, `base.html`, Nov. 3, 2026)"
+   }
+  },
+  "rival_per_share": {
+   "low": {
+    "v": 51.30993910143051,
+    "src": "`parts.html`, Nov. 3, 2026, one free site, checked against no filing"
+   },
+   "mid": {
+    "v": 66.48607381067684,
+    "src": "`parts.html`, Nov. 3, 2026, one free site, checked against no filing"
+   },
+   "high": {
+    "v": 104.49694405025548,
+    "src": "`parts.html`, Nov. 3, 2026, one free site, checked against no filing"
+   }
+  }
+ },
+ "scenarios": [
+  {
+   "key": "signed",
+   "name": "Signed fiber deals ship",
+   "new_sales_m": {
+    "v": 3250,
+    "src": "calc., `strategic.html`, Nov. 3, 2026. $4,333M a year at ceilings over six years, 75% new. Six years, $2 billion for multibillion and 75% are assumptions",
+    "status": "approved"
+   },
+   "margin": {
+    "v": 0.22362337116435477,
+    "src": "Optical Q3, calc., [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm)"
+   },
+   "years": {
+    "v": 2.16,
+    "src": "to end 2028, from Nov. 3, 2026, `strategic.html`"
+   },
+   "capital_per_sale": {
+    "v": 0.6300325081270317,
+    "src": "calc., $5,039M ÷ $7,998M, [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm); [Q1 release, Apr. 28, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000198/glw-20260328xex991xq12026.htm)"
+   },
+   "chance": {
+    "v": 0.7,
+    "src": "owner approved on `strategic.html`, Nov. 3, 2026",
+    "status": "approved"
+   }
+  },
+  {
+   "key": "plan",
+   "name": "Rest of the high-confidence plan",
+   "new_sales_m": {
+    "v": 9985.15,
+    "src": "target, calc.: $35,000M less the Q3 run rate $20,324M and rows 1, 4, 5, `strategic.html`, Nov. 3, 2026; [Springboard release, May 5, 2026, MarketScale copy](https://www.marketscale.com/industries/business-services/corning-upgrades-and-extends-springboard-plan-outlines-new-phase-of-accelerating-growth.md)",
+    "status": "approved"
+   },
+   "margin": {
+    "v": 0.22362337116435477,
+    "src": "Optical Q3, calc., [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm)"
+   },
+   "years": {
+    "v": 4.16,
+    "src": "to end 2030, from Nov. 3, 2026, `strategic.html`"
+   },
+   "capital_per_sale": {
+    "v": 0.6300325081270317,
+    "src": "calc., $5,039M ÷ $7,998M, [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm); [Q1 release, Apr. 28, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000198/glw-20260328xex991xq12026.htm)"
+   },
+   "chance": {
+    "v": 0.4,
+    "src": "owner approved on `strategic.html`, Nov. 3, 2026",
+    "status": "approved"
+   }
+  },
+  {
+   "key": "scaleup",
+   "name": "Optical scale-up to $40 billion",
+   "new_sales_m": {
+    "v": 5000,
+    "src": "target, $40,000M less $35,000M, [Springboard release, May 5, 2026, MarketScale copy](https://www.marketscale.com/industries/business-services/corning-upgrades-and-extends-springboard-plan-outlines-new-phase-of-accelerating-growth.md)",
+    "status": "approved"
+   },
+   "margin": {
+    "v": 0.22362337116435477,
+    "src": "Optical Q3, calc., [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm)"
+   },
+   "years": {
+    "v": 4.16,
+    "src": "to end 2030, from Nov. 3, 2026, `strategic.html`"
+   },
+   "capital_per_sale": {
+    "v": 0.6300325081270317,
+    "src": "calc., $5,039M ÷ $7,998M, [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm); [Q1 release, Apr. 28, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000198/glw-20260328xex991xq12026.htm)"
+   },
+   "chance": {
+    "v": 0.2,
+    "src": "owner approved on `strategic.html`, Nov. 3, 2026",
+    "status": "approved"
+   }
+  },
+  {
+   "key": "solar",
+   "name": "Solar reaches its goal, with profit",
+   "new_sales_m": {
+    "v": 1256,
+    "src": "target, calc.: $3,000M less Q3 × 4 of $1,744M, [Q3 release, Oct. 27, 2026](https://www.sec.gov/Archives/edgar/data/0000024741/000002474126000273/glw-20261027xex99xq32026.htm)",
+    "status": "approved"
+   },
+   "new_profit_m": {
+    "v": 448.1853759011329,
+    "src": "calc.: $3,000M × group net margin 14.0%, plus the Q3 loss of $7M × 4, [Q3 release, Oct. 27, 2026](https://www.sec.gov/Archives/edgar/data/0000024741/000002474126000273/glw-20261027xex99xq32026.htm); [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm)"
+   },
+   "years": {
+    "v": 3.16,
+    "src": "end 2029, my estimate, `strategic.html`, Nov. 3, 2026"
+   },
+   "capital_per_sale": {
+    "v": 1.8417684700407213,
+    "src": "calc., $3,166M ÷ $1,719M, [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm); [Q1 release, Apr. 28, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000198/glw-20260328xex991xq12026.htm)"
+   },
+   "extra_capital_m": {
+    "v": 132,
+    "src": "earn-out liability, [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm)"
+   },
+   "chance": {
+    "v": 0.35,
+    "src": "owner approved on `strategic.html`, Nov. 3, 2026",
+    "status": "approved"
+   }
+  },
+  {
+   "key": "display",
+   "name": "Display price rises hold",
+   "new_sales_m": {
+    "v": 184.85,
+    "src": "assumed 5% of $3,697M, [10-K, filed Feb. 12, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000124/glw-20251231.htm). The 5% is an assumption, `strategic.html`, Nov. 3, 2026",
+    "status": "approved"
+   },
+   "margin": {
+    "v": 0.7903614457831325,
+    "src": "after Glass's tax rate, calc., [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm)"
+   },
+   "years": {
+    "v": 1.16,
+    "src": "to end 2027, from Nov. 3, 2026, `strategic.html`"
+   },
+   "capital_per_sale": {
+    "v": 0,
+    "src": "none, a price rise, `strategic.html`, Nov. 3, 2026"
+   },
+   "chance": {
+    "v": 0.5,
+    "src": "owner approved on `strategic.html`, Nov. 3, 2026",
+    "status": "approved"
+   }
+  },
+  {
+   "key": "rival",
+   "name": "Downside: rival capacity cuts the margin",
+   "margin_cut": {
+    "v": 0.04431708074695323,
+    "src": "Optical 22.4% in Q3 back to 17.9% in Q4 2025, calc., [10-Q, filed Oct. 29, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm); [Q1 release, Apr. 28, 2026](https://www.sec.gov/Archives/edgar/data/24741/000002474126000198/glw-20260328xex991xq12026.htm)"
+   },
+   "applies_to": [
+    "signed",
+    "plan",
+    "scaleup"
+   ],
+   "years": {
+    "v": 3.16,
+    "src": "late 2028 and after, `strategic.html`, Nov. 3, 2026"
+   },
+   "chance": {
+    "v": 0.4,
+    "src": "owner approved on `strategic.html`, Nov. 3, 2026",
+    "status": "approved"
+   }
+  }
+ ]
+}

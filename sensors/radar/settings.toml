@@ -1,0 +1,43 @@
+# What the catalyst radar looks at. These are Claude's first choices, for the owner to change.
+# The SEC contact details and the request rate live in ../edgar/settings.toml, and are not repeated here.
+
+[dates]
+horizon_days = 90          # a dated catalyst inside this many days is listed as due soon
+wide_window_days = 120     # a date range longer than this is shown apart, because it says little about timing
+first_run_lookback_days = 45  # on a company's first run, filings this recent count as new
+
+# Hidden leads use min_rise_pct too. What is hidden, and why, is in the skill and in sensors/README.md.
+[screen]
+quarters_back = 7          # frames to read for each tag: the last two steps, and the same steps a year earlier
+min_rise_pct = 25          # smallest quarter-to-quarter rise, in percent
+min_rise_usd = 10_000_000  # smallest rise in dollars
+min_later_usd = 25_000_000 # smallest later balance in dollars
+min_days_between = 75      # two balances closer or further apart than this are not one quarter apart
+max_days_between = 105
+max_requests_per_run = 80  # stop asking SEC past this. A normal run needs under 40.
+shown_in_report = 40       # rows per step in the report. The saved run keeps them all.
+
+# US GAAP tags in dollars. No other taxonomy or currency is read.
+[[screen.tag]]
+tag = "ContractWithCustomerLiability"
+label = "Contract liabilities"
+[[screen.tag]]
+tag = "ContractWithCustomerLiabilityCurrent"
+label = "Contract liabilities, current"
+[[screen.tag]]
+tag = "ContractWithCustomerLiabilityNoncurrent"
+label = "Contract liabilities, noncurrent"
+[[screen.tag]]
+tag = "RevenueRemainingPerformanceObligation"
+label = "Remaining performance obligations"
+
+# A filing on these forms bears on these catalysts whatever it says, so the radar names them for reading.
+[form_catalysts]
+"SCHEDULE 13D" = ["Activist Schedule 13D watch"]
+"SCHEDULE 13D/A" = ["Activist Schedule 13D watch"]
+"SC 13D" = ["Activist Schedule 13D watch"]
+"SC 13D/A" = ["Activist Schedule 13D watch"]
+"10-Q" = ["At-the-market share program"]
+"10-K" = ["At-the-market share program", "US manufacturing tax credits"]
+"424B5" = ["At-the-market share program"]
+"S-3ASR" = ["At-the-market share program"]

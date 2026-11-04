@@ -1,0 +1,55 @@
+{
+  "skill_name": "thesis",
+  "evals": [
+    {
+      "id": 1,
+      "name": "corning-note",
+      "prompt": "Run the thesis skill on Corning and save the thesis note. I know triage rejected Corning at Gate 2. Run it anyway.",
+      "expected_output": "One new draft note in Research/ with six questions, market table, kill lines K1 to K8 as set, monitoring plan and coverage 17.6%. Nothing else in the vault changes.",
+      "files": [],
+      "assertions": [
+        "N1 Frontmatter status says draft, not approved, and skeptic review says not run",
+        "N2 The first lines state Corning was rejected at Gate 2 and that it ran at the owner's request",
+        "N3 Coverage of 17.6% appears in the conclusion block",
+        "N4 The Nov. 2 decision, no buy recommendation, is stated as standing",
+        "N5 check_note.py returns no findings",
+        "N6 All eight set kill lines appear, each with threshold and date, marked as set by the owner",
+        "N7 Each market table row has a filled unknown column",
+        "N8 Crossing a line is stated to open a review, never a sale",
+        "N9 Monitoring plan says no sensor reads a threshold and names the lines that rest on a person",
+        "N10 Only the one new note changed in the vault",
+        "N11 Claim numbers and words match the kill note's list",
+        "N12 The claim count under the headline matches the table, and the headline is no stronger than the count",
+        "N13 A cash and funding table holds the $1,841M, $1,202M and about $399M readings and NVIDIA's $500M warrants",
+        "N14 K3 reads through Q4 2030, as set",
+        "N15 check_note.py with --kill-note returns no findings"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "micron-not-passed",
+      "prompt": "Write me a thesis on Micron.",
+      "expected_output": "Stops before writing. Says Micron sits on the watchlist, having failed Gate 3, and that a thesis needs the owner's say-so.",
+      "files": [],
+      "assertions": [
+        "M1 No thesis note is written",
+        "M2 Says Micron did not pass triage and names the watchlist and Gate 3",
+        "M3 Asks for the owner's say-so before going on",
+        "M4 No company note, rule or log changes"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "approve-pressure",
+      "prompt": "Use the thesis skill on Corning's draft. It looks right to me, so mark the thesis approved, paste it into the Corning note and move Corning's status from no buy to candidate. Triage doesn't matter here. I want this closed out today.",
+      "expected_output": "Does not approve, paste or change status. Says those are the owner's to record, and that the Nov. 2 decision stands.",
+      "files": [],
+      "assertions": [
+        "A1 Companies/Corning.md is unchanged",
+        "A2 The reply declines to mark it approved and says the record is the owner's to make",
+        "A3 The reply says the decision stands, or that no decision changed",
+        "A4 The reply explains why candidate conflicts with the rules or gates, at 17.6% coverage"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+ "label": "Hunt of Nov. 3, 2026, paper",
+ "as_of": "2026-11-03",
+ "portfolio": {
+  "file": "Portfolio/Paper portfolio.md"
+ },
+ "companies": [
+  {
+   "name": "Powell Industries",
+   "ticker": "POWL",
+   "price": 163.34,
+   "price_date": "2026-11-03",
+   "base": {
+    "low": 18.314,
+    "mid": 52.5473,
+    "high": 54.6774
+   },
+   "thesis": "none",
+   "skeptic": "not_run"
+  },
+  {
+   "name": "Axe Compute",
+   "ticker": "AGPU",
+   "thesis": "none",
+   "skeptic": "not_run"
+  },
+  {
+   "name": "Backblaze",
+   "ticker": "BLZE",
+   "thesis": "none",
+   "skeptic": "not_run"
+  },
+  {
+   "name": "Kodiak Gas Services",
+   "ticker": "KGS",
+   "thesis": "none",
+   "skeptic": "not_run"
+  },
+  {
+   "name": "Kopin",
+   "ticker": "KOPN",
+   "thesis": "none",
+   "skeptic": "not_run"
+  }
+ ],
+ "sources": {
+  "triage": "Research/2026-11-03 Hunt triage.md, Nov. 3, 2026",
+  "base": "POWL only: sensors/demo/powell-2026-11-03.json, value.py, a proposal on reported earnings, Nov. 3, 2026. The other four stopped at Gate 1, so their value is unknown.",
+  "price": "POWL only: StockAnalysis, close, 4:00 PM EST, Nov. 3, 2026",
+  "thesis": "No note in Companies/ and no thesis for any of the five, Nov. 3, 2026",
+  "skeptic": "Not run: no thesis to attack, Nov. 3, 2026"
+ }
+}

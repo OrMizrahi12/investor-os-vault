@@ -1,0 +1,88 @@
+# What a reader concluded after opening a filing. One [[reading]] per filing.
+# It overrides the rule's attention rating and reason, in the Inbox note and on watch.html.
+# These are Claude's judgments, for the owner to confirm. No thesis is written yet, so they
+# rate how much a filing changes the facts, not how it bears on a thesis.
+
+[[reading]]
+accession = "0000024741-26-000034"
+attention = "medium"
+reason = "Q4 results: core sales up 14% to $4.41B. Raises the internal plan to add $11B of annual sales by 2028, a target. First filing to name Meta."
+label = "Q4"
+read = "2026-11-02"
+source_label = "Q4 release, Jan. 28, 2026"
+source_url = "https://www.sec.gov/Archives/edgar/data/24741/000002474126000034/glw-20251231xex99xq42025.htm"
+
+[[reading]]
+accession = "0001206774-26-000108"
+attention = "low"
+reason = "Notice only: the CFO speaks at a Morgan Stanley conference on Mar. 3. No new numbers."
+read = "2026-11-02"
+
+[[reading]]
+accession = "0000024741-26-000198"
+attention = "medium"
+reason = "Q1 results, plus two more large hyperscale deals with no names. Segments were recast, so older comparisons change."
+label = "Q1"
+read = "2026-11-02"
+source_label = "Q1 release, Apr. 28, 2026"
+source_url = "https://www.sec.gov/Archives/edgar/data/24741/000002474126000198/glw-20260328xex991xq12026.htm"
+
+[[reading]]
+accession = "0001206774-26-000265"
+attention = "low"
+reason = "Annual meeting votes: all 10 directors elected, and the independent-chair proposal failed. Routine."
+read = "2026-11-02"
+
+[[reading]]
+accession = "0001206774-26-000266"
+attention = "medium"
+reason = "Notice of the May 6 investor event on plan updates and a new photonics platform. No numbers, but it pointed at real news."
+read = "2026-11-02"
+
+[[reading]]
+accession = "0001206774-26-000273"
+attention = "high"
+reason = "NVIDIA partnership. Corning sold NVIDIA warrants on up to 18M shares (calc.: 15M + 3M) for $500M, so the share count can rise."
+label = "NVIDIA warrants"
+read = "2026-11-02"
+source_label = "Press release, May 6, 2026"
+source_url = "https://www.sec.gov/Archives/edgar/data/24741/000120677426000273/glw4631061-ex991.htm"
+
+[[reading]]
+accession = "0001206774-26-000285"
+attention = "low"
+reason = "Notice only: the CFO and COO speak at a J.P. Morgan conference on May 19. No new numbers."
+read = "2026-11-02"
+
+[[reading]]
+accession = "0000024741-26-000253"
+attention = "medium"
+reason = "Q2 results: core sales up 17% to $4.74B. First filing to name Amazon. States sales run-rate targets of $20B, $30B and $40B, which are targets, not results."
+label = "Q2"
+read = "2026-11-02"
+source_label = "Q2 release, July 28, 2026"
+source_url = "https://www.sec.gov/Archives/edgar/data/24741/000002474126000253/glw-20260728xex99xq22026.htm"
+
+[[reading]]
+accession = "0001206774-26-000517"
+attention = "low"
+reason = "Notice only: the CFO speaks at a Citi conference on Sept. 9. No new numbers."
+read = "2026-11-02"
+
+[[reading]]
+accession = "0001193125-26-389321"
+attention = "high"
+reason = "Corning may sell up to $2B of new shares over time through Goldman Sachs, which can dilute holders. None sold through Sept. 30. Filed under Item 8.01."
+label = "$2B share sale program"
+read = "2026-11-02"
+source_label = "10-Q, filed Oct. 29, 2026"
+source_url = "https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm"
+
+[[reading]]
+accession = "0000024741-26-000273"
+attention = "medium"
+reason = "Q3 results: core sales up 19% to $5.08B. The Solar ramp ran slower than expected. Four long-term deals, two named: Verizon and AT&T."
+label = "Q3"
+read = "2026-11-02"
+source_label = "Q3 release, Oct. 27, 2026"
+source_url = "https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027xex99xq32026.htm"

@@ -1,0 +1,10 @@
+# What 8-K watch follows. Add a [[company]] to follow another one.
+# "since" is the first filing date to report, so adding a company does not pull its whole history.
+
+# Items that get a flag. Change this list to change the flags.
+flag_items = ["1.01", "2.01", "2.02", "5.02", "3.02", "7.01", "8.01"]
+
+[[company]]
+name = "Corning"
+ticker = "GLW"
+since = "2025-11-02"

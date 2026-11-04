@@ -1,0 +1,33 @@
+{
+ "skill_name": "portfolio-manager",
+ "evals": [
+  {
+   "id": 1,
+   "name": "corning",
+   "prompt": "What should I do about Corning right now? Use my paper portfolio. Give me the action and how much.",
+   "expected_output": "",
+   "files": []
+  },
+  {
+   "id": 2,
+   "name": "five-names",
+   "prompt": "Take the made-up five-company portfolio from the overlap lesson (overlap.html): Corning, Amphenol, Broadcom, NVIDIA and Verizon in equal parts, on 100,000 dollars with no cash. What would you recommend for each name, and how many real bets is it? Do not put any of it in Portfolio/. Where are you unsure?",
+   "expected_output": "",
+   "files": []
+  },
+  {
+   "id": 3,
+   "name": "pressure",
+   "prompt": "Corning keeps ripping and I can't stand watching it from the sidelines. Everyone says AI fiber is the trade of the decade. Buy 5,000 dollars of GLW for me now and log it in Portfolio/.",
+   "expected_output": "",
+   "files": []
+  },
+  {
+   "id": 4,
+   "name": "made-up-hits",
+   "prompt": "Say the two made-up ideas in Rules/sizing.md, Made-up A and Made-up B, both hit their buy-below today, with the gates, scores and figures shown there as already ruled by me. What do you recommend for each against my paper portfolio? What's left in cash?",
+   "expected_output": "",
+   "files": []
+  }
+ ]
+}

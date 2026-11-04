@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud Setup</title>
+<style>
+:root {
+  --page: #f9f9f7; --surface: #fcfcfb; --panel: #f0efea; --ink: #0b0b0b; --ink-2: #52514e; --muted: #6f6d68;
+  --border: rgba(11,11,11,0.10); --here: #c94f1e; --up: #2a78d6; --ok: #12795f;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --panel: #121211; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #a3a198;
+    --border: rgba(255,255,255,0.10); --here: #ee7f50; --up: #6aa6ee; --ok: #4cc3a0;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --panel: #121211; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #a3a198;
+  --border: rgba(255,255,255,0.10); --here: #ee7f50; --up: #6aa6ee; --ok: #4cc3a0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1040px; margin: 0 auto; padding: 32px 24px 64px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 20px; margin: 44px 0 10px; }
+p { margin: 0 0 12px; max-width: 72ch; }
+.lead { font-size: 18px; color: var(--ink); }
+.muted, .foot { color: var(--muted); font-size: 14px; }
+a { color: var(--up); }
+code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; background: var(--panel); padding: 1px 4px; border-radius: 3px; overflow-wrap: anywhere; }
+pre { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; font: 14px/1.5 ui-monospace, Menlo, Consolas, monospace; margin: 8px 0 12px; }
+
+.flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: stretch; margin: 20px 0 8px; }
+.box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; border-top: 4px solid var(--muted); }
+.box h3 { margin: 0 0 6px; font-size: 16px; }
+.box ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--ink-2); }
+.box.here { border-top-color: var(--here); }
+.box.hub { border-top-color: var(--up); }
+.box.run { border-top-color: var(--ok); }
+.arrow { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 92px; text-align: center; font-size: 12px; line-height: 1.3; color: var(--muted); }
+.arrow b { font-size: 24px; color: var(--ink-2); font-weight: 400; line-height: 1; margin-bottom: 4px; }
+.wall { margin: 8px 0 0; padding: 10px 14px; border-left: 4px solid var(--here); background: var(--panel); border-radius: 0 8px 8px 0; font-size: 14px; max-width: none; }
+.back { margin: 8px 0 0; padding: 10px 14px; border-left: 4px solid var(--ok); background: var(--panel); border-radius: 0 8px 8px 0; font-size: 14px; max-width: none; }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--border); }
+th { font-weight: 600; color: var(--ink-2); }
+td:first-child { font-weight: 500; min-width: 170px; }
+ol { padding-left: 22px; max-width: 72ch; }
+li { margin-bottom: 6px; }
+.status { display: inline-block; font-size: 13px; font-weight: 600; padding: 2px 10px; border-radius: 99px; background: var(--panel); border: 1px solid var(--border); margin-bottom: 12px; }
+
+@media (max-width: 760px) {
+  main { padding: 24px 16px 48px; }
+  h1 { font-size: 25px; }
+  .flow { grid-template-columns: 1fr; }
+  .arrow { width: auto; flex-direction: row; gap: 8px; }
+  .arrow b { transform: rotate(90deg); margin: 0; }
+  td:first-child { min-width: 120px; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>What goes to the cloud, and what stays here</h1>
+<div class="status" id="status">Not running yet: it waits on your empty repository and the one line below</div>
+<p class="lead"><strong>One weekly check will run with your computer off. It reads only the copy on GitHub and opens no website. Everything that needs SEC, a price or your phone still needs this computer.</strong></p>
+<p>This does not move the system to the cloud. It adds one small job there. A task that reads filings would need your email, a wider network setting and a choice about Telegram, and those are yours to make.</p>
+
+<h2>The picture</h2>
+<div class="flow" role="img" aria-label="This computer sends a copy of committed files through a cloud session to a private GitHub repository. Each Monday a cloud run clones that repository and writes a report.">
+  <div class="box here">
+    <h3>This computer</h3>
+    <ul>
+      <li>The full vault</li>
+      <li>Daily run, Event run, Monthly hunt</li>
+      <li>Telegram token, your email</li>
+      <li>Prices, caches, the pages</li>
+      <li>No GitHub password or token</li>
+    </ul>
+  </div>
+  <div class="arrow"><b>→</b>The one line, only when you type it</div>
+  <div class="box hub">
+    <h3>Private GitHub repository</h3>
+    <ul>
+      <li>Rules, notes, Journal</li>
+      <li>Code, skills, guardrails</li>
+      <li>Paper portfolio</li>
+      <li>About 5 MB (calc.)</li>
+    </ul>
+  </div>
+  <div class="arrow"><b>→</b>Fresh copy every Monday, 09:00 UTC</div>
+  <div class="box run">
+    <h3>Cloud run</h3>
+    <ul>
+      <li>Reads the copy, no website</li>
+      <li>Writes one report on its own branch</li>
+      <li>A new machine each run</li>
+    </ul>
+  </div>
+</div>
+<p class="wall"><strong>The wall:</strong> <code>.gitignore</code> keeps everything in the "stays here" table out of every copy. The telegram file sits outside this folder, so it could not go anyway.</p>
+<p class="back"><strong>The way back:</strong> nothing comes back on its own, because this computer holds no GitHub key. You read the report on claude.ai or GitHub. To keep something, ask a session here to write it down.</p>
+
+<h2>What stays here, and why</h2>
+<div class="scroll"><table>
+<tr><th>What</th><th>Where</th><th>Why it stays</th></tr>
+<tr><td>Your real portfolio</td><td><code>Portfolio/</code>, closed by default. Only its README and the paper note go up.</td><td>You asked. No real holdings are on file today (<code>Portfolio/README.md</code>), so this guards the future: a new file there stays out unless named.</td></tr>
+<tr><td>Your decision logs</td><td><code>Journal/decisions/</code>, except its README</td><td>I added this. Each holds your action, your size and your reason. They are paper today, and they turn into your real sizes the day you hold something.</td></tr>
+<tr><td>Telegram token and chat ID</td><td><code>~/.config/investor-os/telegram.env</code></td><td>Anyone holding the token can send from your bot. It is outside this folder. <code>.gitignore</code> also blocks any <code>.env</code> or key file that lands here by mistake.</td></tr>
+<tr><td>Your personal email</td><td><code>sensors/edgar/settings.toml</code></td><td>The one file outside the caches that holds it (scan of this folder, Nov. 4, 2026). <code>settings.example.toml</code> goes up with a blank address.</td></tr>
+<tr><td>Your email in the history</td><td>This repository's git settings</td><td>Every commit is stamped with an author, for good. This repository signs as <code>investor-os</code> with a no-reply address, not yours.</td></tr>
+<tr><td>Yahoo prices, and the copy of them</td><td><code>sensors/prices/cache/</code>, <code>sensors/concentration/cache/</code></td><td>Your decisions of Nov. 3, 2026: personal use, kept on this computer (<code>sensors/README.md</code>).</td></tr>
+<tr><td>Shiller, FRED and Moody's files</td><td><code>sensors/cash/downloads/</code>, <code>sensors/macro/downloads/</code></td><td>Same notes in <code>sensors/README.md</code>: Shiller's file carries S&amp;P data with no licence stated, and FRED's terms limit storing its data.</td></tr>
+<tr><td>The 62 older pages</td><td><code>/*.html</code></td><td>38 of them name Yahoo or Moody's (calc.), and your notes keep such pages on this computer. All 62 can be read here, so all stay, which is simpler than sorting them. Only this page goes up, and it holds no price.</td></tr>
+<tr><td>Saved runs and samples</td><td><code>sensors/*/runs/</code>, <code>samples/</code></td><td>Daily, radar and valuation runs hold saved closes. <code>sensors/README.md</code> says a valuation run stays here.</td></tr>
+<tr><td>SEC filing cache</td><td><code>sensors/edgar/cache/</code></td><td>Public, but 525 MB. An upload must be under 100 MB (<a href="https://code.claude.com/docs/en/claude-code-on-the-web">cloud sessions docs, undated, retrieved Nov. 4, 2026</a>).</td></tr>
+<tr><td>Guardrail records</td><td><code>.claude/guardrails/</code></td><td>Old copies of your rules and a log of what was blocked, with paths on this computer. The rules themselves and the hook go up. A new copy starts its own records.</td></tr>
+<tr><td>Local state</td><td><code>seen.json</code>, <code>state.json</code>, <code>.obsidian/</code>, <code>.venv/</code></td><td>What this computer has already reported, what you last had open in Obsidian, and 470 MB of installed software.</td></tr>
+</table></div>
+
+<h2>What goes up, and why</h2>
+<div class="scroll"><table>
+<tr><th>What</th><th>Files (calc.)</th><th>Why</th></tr>
+<tr><td>Your rules</td><td>15: <code>Rules/</code>, <code>CLAUDE.md</code>, <code>rules.md</code></td><td>A run with no rules would not be your system.</td></tr>
+<tr><td>The notes</td><td>About 160: Companies, Catalysts, Research, Lessons, Playbooks, Inbox, Templates, Journal</td><td>This is what the check reads.</td></tr>
+<tr><td>Skills, agents, guardrails</td><td>85: <code>.claude/</code></td><td>The hook bars trades and walls off your rules in the cloud too, since a repository's hooks run there (<a href="https://code.claude.com/docs/en/cloud-environments">environments docs, undated, retrieved Nov. 4, 2026</a>).</td></tr>
+<tr><td>Code</td><td>130: <code>sensors/</code>, <code>dashboard/</code></td><td>Scripts only, with no data behind them. Most will not run there.</td></tr>
+<tr><td>Paper portfolio</td><td>1</td><td>Made-up money, and marked so.</td></tr>
+</table></div>
+
+<h2>Going up anyway: your call</h2>
+<ul>
+<li><strong>Single closes inside notes.</strong> The price files and pages stay here, but some notes quote one close, such as <code>Rules/sizing.md</code> and the valuation skill's Corning file. Your notes said the pages and caches stay, and said nothing on these. Stripping them would break the notes, and earlier Journal entries may not be rewritten. A private repository is not publishing, but it is a copy off this computer.</li>
+<li><strong>Your own answers in the Journal.</strong> Today's entry holds your 35%, your hours a week and the mistake you expect to make. The check reads the Journal, so it goes up.</li>
+<li><strong>The word "superposition".</strong> This computer's account name is in a path in two scripts. It is not your name.</li>
+<li><strong>Later.</strong> If you ever write a real trade into a Journal entry, the next send carries it up. The <code>.gitignore</code> cannot catch a sentence. Nothing goes up unless you type the line, so that is the moment to look.</li>
+</ul>
+
+<h2>Cloud against this computer</h2>
+<div class="scroll"><table>
+<tr><th></th><th>Cloud weekly</th><th>Desktop tasks here</th></tr>
+<tr><td>Computer off</td><td>Runs.</td><td>No run, so no Red is written or sent (<code>Rules/alerts.md</code>, Nov. 4, 2026).</td></tr>
+<tr><td>What it sees</td><td>The copy you last sent. It goes stale, so each report states its age first.</td><td>The live vault.</td></tr>
+<tr><td>What it can reach</td><td>The default network allows a list of developer sites, and <code>sec.gov</code> is not on it (<a href="https://code.claude.com/docs/en/cloud-environments">environments docs, undated, retrieved Nov. 4, 2026</a>). This task needs none of them.</td><td>SEC, through your email. Prices by hand.</td></tr>
+<tr><td>Reaching you</td><td>Only when you open it. The token stays here, so nothing goes to your phone.</td><td>A Red reaches Telegram. An Orange waits in the Journal.</td></tr>
+<tr><td>Where your notes sit</td><td>Also on GitHub and on Anthropic's machines during a run.</td><td>Here only.</td></tr>
+<tr><td>Who can change what</td><td>Your GitHub connection can push to any branch, including <code>main</code>. The proxy does not limit that (<a href="https://code.claude.com/docs/en/cloud-environments">same docs</a>). Your copy here is not touched.</td><td>Guardrails on the real files.</td></tr>
+<tr><td>How it can fail</td><td>GitHub connection lost: runs are skipped, and after 72 hours the task turns off. A "succeeded" run only means the session ended well (<a href="https://code.claude.com/docs/en/routines">scheduled tasks docs, research preview, undated, retrieved Nov. 4, 2026</a>).</td><td>Desktop closed or computer off. Nothing notices a run that did not happen (O16).</td></tr>
+<tr><td>Cost</td><td>Draws on your plan's usage (<a href="https://code.claude.com/docs/en/routines">same docs</a>).</td><td>Also draws on your plan.</td></tr>
+<tr><td>Upkeep</td><td>Type the line again after work you want it to see.</td><td>None.</td></tr>
+</table></div>
+
+<h2>What the weekly task does</h2>
+<p>Mondays at 09:00 UTC, on Sonnet, with no connectors. Prompt: <code>Playbooks/Cloud weekly.md</code>. It reports four lists, each line naming its file:</p>
+<ol>
+<li>Catalyst dates that passed with no Outcome written, and dates coming in 7 and 90 days.</li>
+<li>Reds and Oranges in the Journal with no <code>Ruled:</code> line.</li>
+<li>Decision checks and "Look again" dates that are due.</li>
+<li>What is still marked "For me".</li>
+</ol>
+<p><strong>It is not an alert and reads no news.</strong> A quiet report says nothing about any company. It recommends nothing, shows no price, and changes no rule. <code>Rules/alerts.md</code> did not change, and "nothing else sends an alert" still holds.</p>
+
+<h2>How you read the result</h2>
+<ol>
+<li><strong>On any device:</strong> open the task's page on <a href="https://claude.ai/code/routines">claude.ai/code/routines</a>, then <strong>History</strong>, then the run. The report is its last message. The Claude app's Code tab shows it too.</li>
+<li><strong>On GitHub:</strong> the branch <code>claude/cloud-weekly-&lt;date&gt;</code> holds <code>Research/&lt;date&gt; Cloud weekly.md</code>.</li>
+</ol>
+
+<h2>What you do</h2>
+<ol>
+<li>On GitHub, make an empty private repository. Add no README.</li>
+<li>Install the <a href="https://github.com/apps/claude">Claude GitHub App</a> on that one repository. The access stays on Anthropic's servers and never reaches this computer or the session's machine (<a href="https://code.claude.com/docs/en/claude-code-on-the-web">cloud sessions docs, undated, retrieved Nov. 4, 2026</a>).</li>
+<li>Type this line, with your name and repository in both places:</li>
+</ol>
+<pre id="line">! claude --cloud "Push this repository to GitHub, and change no file: git push https://github.com/YOUR-NAME/YOUR-REPO.git HEAD:refs/heads/main. Reply with the pushed commit's hash, or the error if it fails."</pre>
+<p class="muted">Send a newer copy later with the same line, after a commit here.</p>
+
+<p class="foot" style="margin-top:32px">Stays free of prices, so it may go up. It recommends nothing, and no order was placed. Corning stays no buy. Drawn by hand on Nov. 4, 2026. Counts and sizes are calc., from <code>git ls-files</code> and <code>du</code> on Nov. 4, 2026.</p>
+</main>
+</body>
+</html>

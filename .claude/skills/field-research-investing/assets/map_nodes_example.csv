@@ -1,0 +1,11 @@
+id,name,org,role,group
+c1,A. Rivera,Northwind Controls,Chief Executive,company
+c2,B. Okafor,Northwind Controls,Head of Sales,company
+c3,C. Lindqvist,Northwind Controls,Corporate Development,company
+k1,D. Haddad,Harbor Utilities,Operations Manager (user and approver),customer
+k2,E. Novak,Harbor Utilities,Procurement Lead (payer),customer
+r1,F. Mendes,Apex Systems,New Head of Sales,competitor
+r2,G. Tanaka,Apex Systems,Corporate Development,competitor
+a1,H. Varga,Lakeview Partners,M&A Adviser,adviser
+s1,I. Moreau,Precision Castings,Account Manager,supplier
+o1,J. Kowalski,Granite Industrial,Chief Strategy Officer,other
