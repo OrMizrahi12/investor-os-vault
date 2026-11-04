@@ -21,3 +21,9 @@ A command that opens its own screen cannot run through `!`. When Claude hands me
 ## What changed
 
 The line on [cloud.html](../cloud.html) now goes in a separate terminal, with a `cd` first and no `!`. No rule changed.
+
+## It happened again
+
+The next line ran, and the push failed: "access denied by the git proxy: OrMizrahi12/investor-os-vault is not in this session's authorized repository set" (my report, Nov. 4, 2026). The folder had no remote, so the session seems to have been tied to no repository. That cause is Claude's reading: the [environments docs, undated, retrieved Nov. 4, 2026](https://code.claude.com/docs/en/cloud-environments) tie the proxy's API access to a session's attached repositories, and the error text itself was not found in the docs. Claude had relied on one sentence saying a bundled session can push if the GitHub connection has access.
+
+**What changed:** the folder now has a remote, and the line on [cloud.html](../cloud.html) forces the upload. It is still unproven, and says so.
